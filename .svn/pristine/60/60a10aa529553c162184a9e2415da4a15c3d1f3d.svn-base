@@ -1,0 +1,98 @@
+{
+	"additional_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Additional Details",
+		"educationalfarmerTypeId": 48,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Life/health insurance",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"lifeInsurancePreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Mid season",
+				"key":"lifeInsurancePostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Crop insurance",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"cropInsurancePreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"cropInsurancePostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Bank account",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"bankAccountPreSowing",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"bankAccountPostHarvest",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Loan taken from money lender last year",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"loanTakenPreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"loanTakenPostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			}
+		]
+	}
+}

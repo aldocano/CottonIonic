@@ -1,0 +1,34 @@
+angular.module("Course_co-ordinator_homeController", []).
+controller('Course_co-ordinator_homeController', ['$scope','$stateParams','$location', function($scope,$stateParams,$location){
+	
+  $scope.menulists = [
+    { title: 'Add', id: 1 },
+    { title: 'Update', id: 2 },
+    { title: 'Delete', id: 3 },
+    { title: 'View', id: 4 },
+    { title: 'Assigned Student', id: 5 }
+  ];
+
+  $scope.Goclick = function(id)
+  {
+    switch (id) {
+            case 1:
+                $location.path('app/course/'+id);
+                break;
+            case 2:
+                $location.path('app/courseview/'+id);
+                break;
+            case 3:
+                $location.path('app/courseview/'+id);
+                break;
+            case 4:
+                $location.path('app/courseview/'+id);
+                break;
+            case 5:
+                $location.path('app/courseview/'+id);
+                break;
+            default:alert(id);
+
+        }
+  }
+}]);

@@ -1,0 +1,195 @@
+<ion-view view-title="Home" >
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Home</span>
+</ion-nav-title>
+	<ion-side-menus enable-menu-with-back-views="true">
+	<ion-nav-title style="color: white">
+      <i class="ion icon ion-home home_icon"></i>Home
+    </ion-nav-title>
+  <ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style">
+    <div class="body_bg">
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Country
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.Country"                 
+	                ng-options="obj.country_ID as obj.country_Name for obj in countries"
+	                ng-change="getCountryStates()"
+	                class="col inputTypeText1 " 
+	                required >
+	                <option value="">-- Select Country --</option>
+               </select>
+               </div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					State
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.State"                
+	                ng-options="obj.state_ID as obj.state_Name for obj in states"
+	                ng-change="getStatesDistricts()"
+	                class="col inputTypeText1" 
+	                required
+	                id="state">
+	                <option value="">-- Select State --</option>
+               </select>
+               </div>
+			</div>
+		</div>		
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					District
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.District"                
+	                ng-options="obj.district_ID as obj.district_Name for obj in districts"
+	                ng-change="getDistrictBlocks()"
+	                class="col inputTypeText1" 
+	                required>
+	                <option value="">-- Select District --</option>
+               </select>
+               </div>
+			</div>
+		</div>	
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Block
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.Block"                
+	                ng-options="obj.block_ID as obj.block_Name for obj in blocks"
+	                ng-change="getBlockVillages()"
+	                class="col inputTypeText1" 
+	                required
+	                id="country">
+	                <option value="">-- Select Block --</option>
+               </select>
+               </div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Village
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.Village"                
+	                ng-options="obj.village_ID as obj.village_Name for obj in villages"
+	                ng-change="getVillageTimePeriods()"
+	                class="col inputTypeText1" 
+	                required
+	                id="country">
+	                <option value="">-- Select Village --</option>
+               </select>
+               </div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Financial Year
+				</div>
+				<div class="col inputTypeText1">
+				<select ng-model="farmer_Obj.TimePeriod"                
+	                ng-options="obj.timePeriodId as obj.startDate for obj in timePeriods"
+	                ng-change="getVillageTimePeriodsFarmer()"
+	                class="col inputTypeText1" 
+	                required
+	                id="timePeriod">
+	                <option value="">-- Select TimePeriod --</option>
+               </select>
+               </div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Farmer
+				</div>
+				<div class="col inputTypeText1">
+		<select ng-model="farmer_Obj.Farmer" ng-change="getFarmers(farmer)" class="col  inputTypeText1">
+            <option value="" selected="selected" label = "-- Select Farmer --"></option>
+            <option ng-repeat="farmer in farmers | orderBy : 'farmerName' " value="{{farmer.farmerId}}">
+                {{farmer.farmerName}}<br>
+					{{farmer.farmerCode}}
+            </option>
+
+        </select>
+                </div>
+				<!-- <div class="col col-60 inputTypeText1" type="text" readonly="true" ng-click="farmerClicked()">
+					{{farmer.farmerName}}<br>
+					{{farmer.farmerCode}}
+					<i class="ion icon ion-arrow-down-b down_arrow"></i>
+				</div> -->
+			</div>
+		</div>
+	   <!-- <label class="item item-input item-select">
+		    <div class="input-label">
+		      Country
+		    </div>
+		    <select ng-model="selected_country_id" ng-change="selected_country(selected_country_id)" 
+		    		ng-options="country.Country_ID as country.country_Name for country in countries">	  
+		    </select>
+	  </label> 
+	   <label class="item item-input item-select">
+		    <div class="input-label">
+		      State
+		    </div>
+		    <select ng-model="selected_state_id" ng-change="selected_state(selected_state_id)" 
+		    		ng-options="state.State_ID as state.State_Name for state in states">	  
+		    </select>
+	  </label>
+	   <label class="item item-input item-select">
+		    <div class="input-label">
+		      District
+		    </div>
+		    <select ng-model="selected_district_id" ng-change="selected_district(selected_district_id)" 
+		    		ng-options="district.District_ID as district.District_Name for district in districts">	  
+		    </select>
+	  </label>
+	   <label class="item item-input item-select">
+		    <div class="input-label">
+		      Block
+		    </div>
+		    <select ng-model="selected_block_id" ng-change="selected_block(selected_block_id)" 
+		    		ng-options="block.Block_ID as block.Block_Name for block in blocks">	  
+		    </select>
+	  </label>
+	   <label class="item item-input item-select">
+		    <div class="input-label">
+		      Village
+		    </div>
+		    <select ng-model="selected_village_id" ng-change="selected_village(selected_village_id)" 
+		    		ng-options="village.Village_ID as village.Village_Name for village in villages">	  
+		    </select>
+	  </label>
+	  <label class="item item-input item-select">
+		    <div class="input-label">
+		      Farmer
+		    </div>
+		    <select ng-model="selected_farmer_id" ng-change="selected_farmer(selected_farmer_id)" 
+		    		ng-options="farmer.Farmer_ID as farmer.Farmer_FirstName for farmer in farmers">	  
+		    </select>
+	  </label> --> 
+
+	 	  <label class="item body_bg bn" style="margin-bottom: -5px">
+      </label>
+	</div> 
+	
+  </ion-content>
+  <div class="bar bar-footer">
+		<div class="row" style="padding: 0px;margin-top: -7px;">
+			<button class="submitBtn col" ng-click='next()'
+			ng-class="farmer_Obj.length == 0? 'btn-disabled' : 'btn-enabled'"
+			ng-disabled="Submit_disable">Next</button>
+		</div>
+	</div>
+  </ion-side-menus>
+  </ion-view>

@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="state in states">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="state.checked"
+        ng-checked="state.checked" ng-change="changeState({{$index}})">   
+      </label><h2 class="popup_label">{{state.state_Name}}</h2>        
+    </div>
+</div>

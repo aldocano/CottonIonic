@@ -1,0 +1,139 @@
+{
+	"land_and_irrigation_details": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Land And Irrigation Details",
+		"landAndIrrigationDetailsSeasonTypeId": 14,
+		"landAndIrrigationDetailsSourceOfIrrigationTypeId": 15,
+		"landAndIrrigationDetailsTypeOfIrrigationTypeId": 16,
+		"landAndIrrigationDetailsMainCropTypeId": 6,
+		"landAndIrrigationDetailsIntercropTypeId": 6,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[
+			{
+				"key":"toalArea",
+				"label": "Total area",
+				"type":3,
+				"value": ""
+			},
+			{
+				"key":"toalOArea",
+				"label": "Total organic area",
+				"type":3,
+				"value": ""
+			}
+		],		
+		"activities": [
+			{
+				"name": "Registered Cotton Farm no. "
+			}
+		],
+		"details": [
+			{   
+				"name": "Season",
+				"type": 4.1,
+				"has_child": false,
+				"has_select": true,
+				"value": "Tap"
+			},
+			{   
+				"key":"landArea",
+				"name": "Land area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Irrigated",
+				"type": 7,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Main Crop",
+				"type": 4.2,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Intercrop",
+				"type": 4.3,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Source of irrigation",
+				"type": 4.4,
+				"has_child": false,
+				"has_select": true,
+				"value": "Tap"
+			},
+			{
+				"name": "Type of irrigation",
+				"type": 4.5,
+				"has_child": false,
+				"has_select": true,
+				"value": "Tap"
+			}
+		],
+		"child_details": [
+			
+		],
+		"select_details":[
+			{
+				"parent":"Season",
+				"name":"Kharif"
+			},
+			{
+				"parent":"Season",
+				"name":"Rabi"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"Open well"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"Bore well"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"Farm pond"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"River"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"Canal"
+			},
+			{
+				"parent":"Source of irriation",
+				"name":"None"
+			},
+			{
+				"parent":"Type of irriation",
+				"name":"Flood"
+			},
+			{
+				"parent":"Type of irriation",
+				"name":"Drip"
+			},
+			{
+				"parent":"Type of irriation",
+				"name":"Rain-fed"
+			}
+		]
+	}
+}

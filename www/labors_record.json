@@ -1,0 +1,182 @@
+{
+	"labors_record": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Labours record",
+		"farmActivity": 27,
+		"landpreparationPracticeTypeId": 28,
+		"seedPracticesTypeId": 29,
+		"fertilizerPracticesTypeId": 30,
+		"biopesticidePracticesTypeId": 31,
+		"irigationPracticesTypeId": 32,
+		"weedingPracticesTypeId": 33,
+		"pickingPracticesTypeId": 34,
+		"landTypeId": 186,
+		"seedTypeId": 187,
+		"fertilizerTypeId": 188,
+		"biopesticideTypeId": 189,
+		"irigationTypeId": 190,
+		"weedingTypeId": 191,
+		"pickingTypeId": 192,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+	        {
+				"name": "Land Preparation"
+			},
+			{
+				"name": "Seed"
+			},
+			{
+				"name": "Fertilizer"
+			},
+			{
+				"name": "Bio Pesticide"
+			}
+			,
+			{
+				"name": "Irigation"
+			}
+			,
+			{
+				"name": "Weeding"
+			}
+			,
+			{
+				"name": "Picking"
+			}
+		],
+		"details": [
+		
+		],
+		"child_details": [
+			
+		]
+		,
+		"add_chlid_details":[
+			{
+				"name": "labors",
+				"type": 1,
+				"has_child": true,
+				"value": 0,
+				"child_details": [{
+						"parent": "labors",
+						"key":"practices",
+						"name": "Practices",
+						"type": 2,
+						"has_child": false,
+						"value": "Tap"
+					},
+			        {
+			        	"parent": "labors",
+						"key":"farmArea",
+						"name": "Operational/farm area(ha)",
+						"type": 3,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"parent": "labors",
+						"name": "Male Labor Utilized",
+						"type": 4,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "maleNo",
+						"name": "Number",
+						"type": 4.1,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "maleDays",
+						"name": "Days",
+						"type": 4.2,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "maleLabor",
+						"name": "Labor(Rate/day)",
+						"type": 4.3,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"parent": "labors",
+						"name": "Female Labor Utilized",
+						"type": 4,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "femaleNo",
+						"name": "Number",
+						"type": 4.1,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "femaleDays",
+						"name": "Days",
+						"type": 4.2,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "femaleLabor",
+						"name": "Labor(Rate/day)",
+						"type": 4.3,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"parent": "labors",
+						"name": "Out of School Children",
+						"type": 4,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "childrenNo",
+						"name": "Number",
+						"type": 4.1,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					},
+					{
+			        	"parent": "labors",
+			        	"key": "childrenDays",
+						"name": "Days",
+						"type": 4.2,
+						"status":true,
+						"has_child": false,
+						"value": " "
+					}
+				]
+			}
+			
+		]
+	}
+}

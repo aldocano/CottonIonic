@@ -1,0 +1,47 @@
+angular.module('CoursewisestudentListcontroller', [])
+.controller('CourseWiseStudentListCtrl', function($scope, $stateParams,$timeout,$location,$state,$ionicHistory) {
+
+   
+      var invalidEntries = 0;
+     if ($stateParams.Id.length > 2 ) {
+     	    $scope.Button="Update";
+			var viewArray=[];
+			db.get('course').then(function (doc) {
+			viewArray=doc.records;
+			}).catch(function (err) {
+			console.log(err);
+			});
+			 $timeout( function(){
+		    var updateData = viewArray.filter(function(obj) { if ($stateParams.Id == obj.id ) {
+			    return true;
+			  } else {
+			    invalidEntries++;
+			    return false;
+			  } });
+    
+		$scope.courseData={
+         name:updateData[0].name,
+         description:updateData[0].description
+
+		}
+	   },1000);
+     }
+
+
+    $scope.Goclick= function(id){
+
+      switch ($stateParams.Id) {
+            case "2":
+                $location.path('app/course/'+id);
+                break;
+            case "3":
+                $scope.Delete(id);
+                break;
+            case "4":
+                //$location.path('app/courseview/'+id);
+                break;
+            default:
+
+        }
+    }
+});

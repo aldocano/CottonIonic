@@ -1,0 +1,609 @@
+{
+
+	"types":[
+		{
+			"name": "text",
+			"key":1
+		},
+		{
+			"name": "toggle",
+			"key":2
+		},
+		{
+			"name": "number",
+			"key":3
+		},
+		{
+			"name": "select",
+			"key":4
+		},
+		{
+			"name": "array",
+			"key":5
+		},
+		{
+			"name": "date",
+			"key":6
+		},
+		{
+			"name": "checkbox",
+			"key":7
+		},
+		{
+			"name": "latitude",
+			"key":8
+		},
+		{
+			"name": "longitude",
+			"key":9
+		},
+		{
+			"name": "getLatitudeLongitudeButton",
+			"key":10
+		}
+
+	],	
+	"land_details": {
+		"activities": [
+			{
+				"name": "Total area"
+			},
+			{
+				"name": "Total organic area"
+			},
+			{
+				"name": "Oraganic farm no. 1"
+			},
+			{
+				"name": "Oraganic farm no. 2"
+			},
+			{
+				"name": "Oraganic farm no. 3"
+			}
+		],
+		"details": [
+			{
+				"name": "Land area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"value": 2
+			},
+			{
+				"name": "Survey No",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "GPS Coordinates",
+				"has_child": true
+			},
+			{
+				"name": "Current Status",
+				"type": 4,
+				"has_child": false,
+				"value": 0,
+				"select": [
+				   {
+					"val":"IC1"
+				   },
+				   	{
+					"val":"IC2"
+				   },
+				   {
+					"val":"Organic"
+				   }
+				]
+			}
+		],
+		"child_details": [
+			{
+				"parent": "GPS Coordinates",
+				"name": "Latitude",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "GPS Coordinates",
+				"name": "Longitude",
+				"type": 3,
+				"value": 0
+			}
+		]
+	},	
+	"soil_preparation_cost": {
+		"activities": [
+			{
+				"name": "Ploughing"
+			},
+			{
+				"name": "Harrowing"
+			},
+			{
+				"name": "Leveling"
+			},
+			{
+				"name": "Rotavator"
+			},
+			{
+				"name": "Others…………"
+			}
+		],
+		"details": [
+			{
+				"name": "Activity Done?",
+				"type": 2,
+				"has_child": false,
+				"value": 2
+			},
+			{
+				"name": "Area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Oil Purchased",
+				"has_child": true
+			},
+			{
+				"name": "Cost (In Rs.)",
+				"has_child": true
+			},
+			{
+				"name": "Total cost (INR)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}
+		],
+		"child_details": [
+			{
+				"parent": "Oil Purchased",
+				"name": "Cost (In Rs.)",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "Oil Purchased",
+				"name": "Quantity (In Litres.)",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "Cost (In Rs.)",
+				"name": "Labor",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "Cost (In Rs.)",
+				"name": "Hired Equipment",
+				"type": 3,
+				"value": 0
+			}
+		]
+	},
+	"sowing_cost": {
+		"activities": [
+			{
+				"name": "Slno 1"
+			},
+			{
+				"name": "Slno 2"
+			},
+			{
+				"name": "Slno 3"
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Seed veriety",
+				"type": 2,
+				"has_child": false,
+				"value": false
+			},
+			{
+				"name": "Total Qty. Used (Kg.)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Total Cost (In Rs.)",
+				"has_child": true
+			},
+			{
+				"name": "Total cost (INR)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}
+		],
+		"child_details": [
+			{
+				"parent": "Total Cost (In Rs.)",
+				"name": "Seed Cost",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "Total Cost (In Rs.)",
+				"name": "Labor",
+				"type": 3,
+				"value": 0
+			}
+			
+		]
+	},
+	"water_use": {
+		"activities": [
+			{
+				"name": "1"
+			},
+			{
+				"name": "2"
+			},
+			{
+				"name": "3"
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Capacity of the water pump installed (In HP)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Length of suction pipe (meters)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Length of delivery pipe (meters)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Diameter of the pipe used for drawing water (In Inches)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},			
+			{
+				"name": "Cost of electricity",
+				"has_child": true
+			},
+			{
+				"name": "Depth of water at source (In Ft)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}			
+		],
+		"child_details": [
+			{
+				"parent": "Cost of electricity",
+				"name": "Rupees/ Unit",
+				"type": 3,
+				"value": 0
+			},
+			{
+				"parent": "Cost of electricity",
+				"name": "Rupees/ Year",
+				"type": 3,
+				"value": 0
+			}
+			
+		]
+	},	
+	"help_employement": {
+		"activities": [
+			{
+				"name": "Farmer"
+			},
+			{
+				"name": "Husband/Wife"
+			},
+			{
+				"name": "Not Paid (ex. Relatives excluding farmer and husband/ wife))"
+			},
+			{
+				"name": "Paid (ex. Labor)"
+			},
+			{
+				"name": "Children < 14 yrs of age)"
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Helping/ Employed",
+				"type": 2,
+				"has_child": false,
+				"value": false
+			},
+			{
+				"name": "Land Preparation",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Sowing",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Weeding",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Manure & Botanical application",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Picking",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}
+		],
+		"child_details": [
+					
+		]
+	},
+	"irrigation_details": {
+		"activities": [
+			{
+				"name": "Irrigation No. 1"
+			},
+			{
+				"name": "Irrigation No. 2"
+			},
+			{
+				"name": "Irrigation No. 3"
+			},
+			{
+				"name": "Irrigation No. 4"
+			},
+			{
+				"name": "Irrigation No. 5"
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Cotton area irrigated",
+				"type": 3,
+				"has_child": false,
+				"value": false
+			},
+			{
+				"name": "Duration of Motor Running",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Kerosene or Diesel motor used",
+				"type": 2,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Quantity of oil used (liters)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Cost of oil (INR)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}
+		],
+		"child_details": [
+					
+		]
+	},
+	"manure_application": {
+		"activities": [
+			{
+				"name": "Seriel No. 1",
+				"value":"Neem seed cake"
+			},
+			{
+				"name": "Seriel No. 2",
+				"value":"Amrut pani"
+			},
+			{
+				"name": "Seriel No. 3",
+				"value":"Beejamrut"
+			},
+			{
+				"name": "Seriel No. 4",
+				"value":"Bio Dynamic Preparations"
+			},
+			{
+				"name": "Seriel No. 5",
+				"value":"Crop residues in manure"
+			},
+			{
+				"name": "Seriel No. 6",
+				"value":"Decomposed cow dung"
+			},
+			{
+				"name": "Seriel No. 7",
+				"value":"Poultry manure"
+			},
+			{
+				"name": "Seriel No. 8",
+				"value":"Vermi-wash"
+			},
+			{
+				"name": "Seriel No. 9",
+				"value":"Vermi-compost"
+			},
+			{
+				"name": "Seriel No. 10",
+				"value":"Raw manure"
+			},
+			{
+				"name": "Seriel No. 11",
+				"value":"Fermented cow urine"
+			},
+			{
+				"name": "Seriel No. 12",
+				"value":"Compost manure"
+			},
+			{
+				"name": "Seriel No. 13",
+				"value":"Farm yard manure"
+			},
+			{
+				"name": "Seriel No. 14",
+				"value":"Sunflower - oil seed cake"
+			},
+			{
+				"name": "Seriel No. 15",
+				"value":"Groundnut - oil seed cake"
+			},
+			{
+				"name": "Seriel No. 16",
+				"value":"Castor - oil seed cake"
+			},
+			{
+				"name": "Seriel No. 17",
+				"value":"Micronutrient"
+			},
+			{
+				"name": "Seriel No. 18",
+				"value":"Limestone/ Gypsum"
+			},
+			{
+				"name": "Seriel No. 19",
+				"value":"Sodium Chloride"
+			},
+			{
+				"name": "Seriel No. 20",
+				"value":"Calcium chloride"
+			},
+			{
+				"name": "Seriel No. 21",
+				"value":"Bio-fertilizers"
+			},
+			{
+				"name": "Seriel No. 22",
+				"value":"Other1 __"
+			},
+			{
+				"name": "Seriel No. 23",
+				"value":"Other2 __"
+			},
+			{
+				"name": "Seriel No. 24",
+				"value":"Other3 __"
+			},
+			{
+				"name": "Seriel No. 25",
+				"value":"Other4 __"
+			},
+			{
+				"name": "Seriel No. 26",
+				"value":"Other5 __"
+			},
+			{
+				"name": "Seriel No. 27",
+				"value":"Other6 __"
+			}								
+		],
+		"details": [
+			
+			{
+				"name": "Manure",
+				"type": 5,
+				"has_child": false,
+				"value": [
+						  "Neem seed cake",
+						  "Amrut pani",
+						  "Beejamrut",
+						  "Bio Dynamic Preparations",
+						  "Crop residues in manure",
+						  "Decomposed cow dung",
+						  "Poultry manure",
+						  "Vermi-wash",
+						  "Vermi-compost",
+						  "Raw manure",
+						  "Fermented cow urine",
+						  "Compost manure",
+						  "Farm yard manure",
+						  "Sunflower - oil seed cake",
+						  "Groundnut - oil seed cake",
+						  "Castor - oil seed cake",
+						  "Micronutrient",
+						  "Limestone/ Gypsum",
+						  "Sodium Chloride",
+						  "Calcium chloride",
+						  "Bio-fertilizers",
+						  "Other1 ________________",
+						  "Other2 ________________",
+						  "Other3 ________________",
+						  "Other4 ________________",
+						  "Other5 ________________",
+						  "Other6 ________________"
+		 				 ] 
+			},
+			{
+				"name": "Source",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Field /Area covered",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Quantity (Kg)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Material Cost(In Rs.)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Labor Cost(In Rs.)",
+				"type": 3,
+				"has_child": false,
+				"value": 0
+			}			
+		],
+		"child_details": [
+					
+		]
+	}		
+}

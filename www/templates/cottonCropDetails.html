@@ -1,0 +1,39 @@
+<ion-view view-title="Cotton Crop Details">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Cotton Crop Details</span>
+</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style"> 
+    <ion-list>
+          <div class="list_div" ng-repeat="item in cotton_crop_details_obj.details">
+            <div class="row">      
+              <div class="col col-60 acc_body" ng-class = "item.type == 2?'a':'b'">{{item.name}}</div>          
+  
+                <div class="col inputTypeText1" ng-show="item.type == 3" ng-class="flag?'ab':'acc_input'">
+                    <select id="soi_id" ng-model="item.value"  
+                      ng-options="obj.typeDetailId as obj.name for obj in spArray | orderBy:'typeDetailId'"
+                      ng-change="getChange(item,'soi',item.value)"
+                      ng-show="item.type == 3" class="col dd_wrap" 
+                      ng-disabled= "flag"
+                      ng-class="flag?'ab':'acc_input'" 
+                      required>
+                      <option value="">Select</option>
+                    </select>
+                  </div>
+                <input type="text" ng-pattern="/^[0-9]{1,3}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="floatValidation(item,item.value);" class="col" ng-show="item.type == 1"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+                
+                <input type="text" ng-pattern="/^[0-9]{1,4}?$/" ng-keyup="integerValidation(item,item.value);" class="col" ng-show="item.type == 4"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+          </div>
+        </div>
+    </ion-list>
+    <pre>                  
+
+
+  	</pre>
+  </ion-content>
+    <div class="bar bar-footer">
+		  <div class="row" style="padding: 0px;margin-top: -7px;">
+			 <button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			 <button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		  </div>
+ 	  </div>
+</ion-view>

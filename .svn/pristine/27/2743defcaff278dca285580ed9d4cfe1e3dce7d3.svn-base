@@ -1,0 +1,31 @@
+<ion-view view-title="Login">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Login</span>
+</ion-nav-title>
+  <ion-content ng-click="closeDrawer()" class = "" has-bouncing="false" scroll="false" ng-style="content_Style">
+    <form>
+      <div style="width: 90%; margin-left: 5%; " >
+        <div class="list login_div" style="width: inherit;margin-left: inherit;"><center>
+          <label class="item item-input user_name bn" style="width: inherit; margin-left: inherit;">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input type="text" ng-model="loginData.username" placeholder="Username" class="login_textfields">
+          </label></center>
+        </div>
+        <div class="list" style="width: inherit;margin-left: inherit;"> 
+        <center>
+          <label class="item item-input user_name bn" style="width: inherit;margin-left: inherit;">
+            <i class="icon ion-locked placeholder-icon" ></i>
+            <input type="password" ng-model="loginData.password" class="login_textfields" placeholder="Password" onpaste="return false;">
+          </label>
+          <a class="button button-block login_button" type="submit" ng-click="doLogin()">Log in</a>
+        </center> 
+        </div>
+      </div>
+    </form>
+    <div style="margin-top:25%">
+      <center>
+        <img src="login.jpg" style="width: 40%;" >
+      </center>
+    </div>
+  </ion-content>
+</ion-view>

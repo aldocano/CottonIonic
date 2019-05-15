@@ -1,0 +1,96 @@
+<ion-view view-title="Land Details" ng-style={{title_Style}}>
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Land Details</span>
+</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style">
+  <div class="row body_bg" ng-repeat="data in land_details_obj.pre_table_data">
+      <div class="row">
+        <div class="col col-60 inputTypeText" style="width: 100%">
+          {{data.label}}
+        </div>
+        <input type="text" ng-pattern="/^[0-9]{1,3}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="areaCalculation(data,'',data.key,data.value,'pre_table_data')" class="col acc_input" ng-show="data.type == 3" ng-model="data.value" ng-disabled= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">
+      </div>
+  </div>  
+    <ion-list>
+        <div ng-repeat="activity in land_details_obj.activities">
+          <ion-item class="item-stable acc_text"
+                    ng-click="toggleGroup(activity)"
+                    style="background: #A18154;"
+                    ng-class="{active: isGroupShown(activity)}">
+              <i class="icon" ng-class="isGroupShown(activity) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{activity.name}}
+          </ion-item>
+          <div class="list_div item-accordion"
+                    ng-repeat="item in activity.details"
+                    ng-show="isGroupShown(activity)">
+              <div class="row">      
+                <div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'">{{item.name}}</div>
+                
+                <input type="text" ng-pattern="/^[0-9]{1,3}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="areaCalculation(activity,item,item.key,item.value,'activities')" class="col" ng-show="item.type == 3"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">
+             
+
+              <button class="button button-dark col btnh8" ng-show="item.type == 10" ng-click="captureGPS(activity,item)" ng-disabled= "flag">GPS
+                </button>
+                <!-- latitude -->
+                <input type="number" class="col" ng-show="item.type == 8"  ng-model="item.value" ng-readonly= "true" ng-class="true?'ab':'acc_input'" onpaste="return false;">
+                <!-- longitude -->
+                <input type="number" class="col" ng-show="item.type == 9"  ng-model="item.value" ng-readonly= "true" ng-class="true?'ab':'acc_input'" onpaste="return false;">
+
+          <!--       <div class="col acc_input dd_wrap"  ng-click="csClicked(activity,item)" ng-show="item.type == 4" ng-disabled= "flag" ng-class="flag?'ab':'acc_input'">
+                 {{item.value}}
+                  <i class="ion icon ion-arrow-down-b down_arrow down_arrow1"></i>
+                </div> -->
+                <!-- ng-model="cs_dumObj[land_details_obj.activities.indexOf(activity)]"  -->
+               <div class="col inputTypeText1" ng-show="item.type == 4" ng-class="flag?'ab':'acc_input'">
+               <select ng-model="item.value"  
+                  ng-options="obj.name as obj.name for obj in landDetailCurrentStatus"
+                  ng-change="getChange(activity,item,item.value)"
+                  ng-show="item.type == 4" class="col dd_wrap" 
+                  ng-disabled= "flag"
+                  ng-class="flag?'ab':'acc_input'" 
+                  required>
+                  <option value="">Select</option>
+               </select>
+               </div>
+                <div class="col" ng-show="item.type == 2" style="background-color: #45BFAE; max-height: 34px; text-align: center">
+                <label class="toggle" style="margin-top: -8px">
+                       <input type="checkbox" ng-model="item.value" ng-disabled= "flag">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                    </label>
+                </div>   
+
+                <input type="text" ng-pattern="/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/" ng-keyup="validString(activity,item,item.value)" ng-model="item.value" ng-show="item.type == 1" class="col" ng-disabled= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">      
+              </div>
+          </div>
+        </div>
+    </ion-list>
+    <div style="float: right">
+      <table>
+        <tr>
+          <button class="ion icon ion-plus add_remove" ng-click="add()" ng-disabled="flag"></button>
+        </tr>
+        <tr>
+          <button class="ion icon ion-minus add_remove" ng-click="remove()" ng-disabled="flag"></button>
+        </tr>  
+      </table>  
+    </div>
+     <pre>                  
+		  		  
+		  
+		  
+		  
+		  
+		  
+		  
+    </pre>
+	</ion-content>
+	<div class="bar bar-footer">
+		<div class="row" style="padding: 0px;margin-top: -7px;">
+			<button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			<button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		</div>
+	</div>
+</ion-view>	

@@ -1,0 +1,56 @@
+{
+	"irrigation_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Irrigation Details",
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Irrigation No. "
+			}
+		],
+		"details": [
+			
+			{
+				"key":"areaIrrigated",
+				"name": "Cotton area irrigated (Ha)",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Duration of Motor Running (Hours)",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Kerosene or Diesel motor used",
+				"type": 2,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Quantity of oil used (liters)",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Cost of oil (INR)",
+				"type": 5,
+				"has_child": false,
+				"value": " "
+			}
+		],
+		"child_details": [
+					
+		]
+	}
+}

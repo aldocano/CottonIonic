@@ -1,0 +1,27 @@
+[{
+	"Ploughing":null,
+	"Harrowing":null,
+	"Leveling":null,
+	"Rotavator":null,
+	"Others…………":null
+},
+{
+	"Activity": null,
+	"Activity Done?*": null,
+	"Area(Ha)":null,
+	"Oil Purchased":
+		[
+			{
+				"Cost (In Rs.)":null,
+				"Quantity (In Litres.)":null
+			}
+		],
+	"Cost (In Rs.)":
+		[
+			{
+				"Labor":null,
+				"Hired Equipment":null
+			}
+		],
+	"Total cost (INR)":null
+}]

@@ -1,0 +1,14 @@
+{
+	"Capacity of the water pump installed (In HP)":null,
+	"Length of suction pipe (meters)":null,
+	"Length of delivery pipe (meters)":null,
+	"Diameter of the pipe used for drawing water (In Inches)":null,
+	"Cost of electricity":
+	[
+		{
+			"Rupees/ Unit":null,
+			"Rupees/ Year":null
+		}
+	],
+	"Depth of water at source (In Ft)":null
+}

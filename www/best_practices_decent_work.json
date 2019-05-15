@@ -1,0 +1,62 @@
+{
+	"best_practices_decent_work": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Best practices or Decent work",
+		"kindOfProtectionClothingTypeId": 23,
+		"whereYouStoreTypeId": 24,
+		"howDoYouDealTypeId": 25,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[],		
+		"activities": [],
+		"details": [
+			{   
+				"name": "Do you use any protection clothing while spraying organic pesticide in Registered Farm?",
+				"type": 7,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{   
+				"name":"What kind of protection clothing do you use in Registered Farm?",
+				"type": 4.1,
+				"has_child": false,
+				"has_select": true,
+				"value": " ",
+				"status": true
+			},
+			{
+				"name": "Do you store organic seeds, pesticides and manure for Registered Farm?",
+				"type": 7,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Where do you store organic seeds, pesticides and manure for Registered Farm?",
+				"type": 4.2,
+				"has_child": false,
+				"has_select": true,
+				"value": " ",
+				"status": true
+			},
+			{
+				"name": "How do you deal with organic seeds, pesticides and manure packs after use in Registered Farm?",
+				"type": 4.3,
+				"has_child": false,
+				"has_select": true,
+				"value": " "
+			}
+		],
+		"child_details": [
+			
+		],
+		"select_details":[]
+	}
+}

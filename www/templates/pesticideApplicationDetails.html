@@ -1,0 +1,84 @@
+<ion-view view-title="Pesticide Application Details">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Pesticide Application Details</span>
+</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style"> 
+    <ion-list>
+        <div ng-repeat="activity in pesticide_application_details_obj.activities">
+          <ion-item class="item-stable acc_text"
+                    ng-click="toggleGroup(activity)" 
+                    style="background: #A18154;"
+                    ng-class="{active: isGroupShown(activity)}">
+              <i class="icon" ng-class="isGroupShown(activity) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{activity.name}}
+          </ion-item>
+          <div class="list_div item-accordion" ng-repeat="item in activity.details" ng-show="isGroupShown(activity)">
+            <div class="row">      
+              <div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'">{{item.name}}</div>          
+  
+              <input type="text" ng-pattern="/^[0-9]{1,6}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="floatValidation2(activity,item,item.value)" class="col" ng-show="item.type == 5"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+
+              <input type="text" ng-pattern="/^[0-9]{1,3}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="floatValidation(activity,item,item.value);areaCompareValidation(activity,item,item.key,item.value)" class="col" ng-show="item.type == 1"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+
+              <input type="text" ng-pattern="/^[0-9]{1,2}?$/" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ng-keyup="integerValidation2(activity,item,item.value)" class="col" ng-show="item.type == 2" ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+
+              <input type="text" ng-pattern="/^[0-9]{1,4}?$/" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ng-keyup="integerValidation4(activity,item,item.value)" class="col" ng-show="item.type == 3" ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+
+              <input type="text" ng-pattern="/^[0-9]{1,3}?$/" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ng-keyup="integerValidation(activity,item,item.value)" class="col" ng-show="item.type == 11"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+  
+              <div class="col acc_input dd_wrap" ng-click="datepickerClicked(activity,item)" ng-show="item.type == 6" ng-class="flag?'ab':'acc_input'">
+                {{item.value}}
+              </div>
+
+              <div class="col inputTypeText1" ng-show="item.type == 4.1" ng-class="flag?'ab':'acc_input'" >
+              <select ng-model="item.value"  
+                ng-options="obj.name as obj.name for obj in psdArray | orderBy:'typeDetailId'"
+                ng-change="getChange(activity,item,'psd',item.value)"
+                ng-show="item.type == 4.1" class="col dd_wrap" ng-class="flag?'ab':'acc_input'" 
+                ng-disabled="flag" required>
+                <option value="">Select</option>
+              </select> 
+              </div>
+              <div class="col inputTypeText1" ng-show="item.type == 4.2" ng-class="flag?'ab':'acc_input'">               
+              <select ng-model="item.value"  
+                ng-options="obj.typeDetailId as obj.name for obj in srcArray | orderBy:'typeDetailId'"
+                ng-change="getChange(activity,item,'',item.value)"
+                ng-show="item.type == 4.2" class="col dd_wrap" ng-class="flag?'ab':'acc_input'" 
+                ng-disabled="flag" required>
+                <option value="">Select</option>
+              </select>
+              </div>
+              <div class="col inputTypeText1" ng-show="item.type == 4.3" ng-class="flag?'ab':'acc_input'" >
+              <select id="sec_id" ng-model="item.value"   
+                ng-options="obj.name as obj.name for obj in trpArray | orderBy:'typeDetailId'"
+                ng-change="getChange1(activity,item,item.value)"
+                ng-show="item.type == 4.3" class="col dd_wrap" ng-class="flag?'ab':'acc_input'" multiple="multiple" 
+                ng-disabled="flag" required>
+              </select>
+              </div>
+            </div>
+          </div>
+        </div>
+    </ion-list>
+    <div style="float: right">
+      <table>
+        <tr>
+          <button class="ion icon ion-plus add_remove" ng-click="add()" ng-disabled="flag"></button>
+        </tr>
+        <tr>
+          <button class="ion icon ion-minus add_remove" ng-click="remove()" ng-disabled="flag"></button>
+        </tr>  
+      </table>    
+    </div>  
+    <pre>                  
+
+  	</pre>
+  </ion-content>
+    <div class="bar bar-footer">
+		  <div class="row" style="padding: 0px;margin-top: -7px;">
+			 <button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			 <button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		  </div>
+ 	  </div>
+</ion-view>

@@ -1,0 +1,130 @@
+var db = new PouchDB("college_info", {auto_compaction: true});
+var remoteDB = new PouchDB("http://kennith:kennith@192.168.1.108:5984/college_info");
+
+angular.module('starter', ['ionic', 'starter.controllers','starter.studentcontroller','starter.coursecontroller'
+  , 'LoginController', 'MainService',
+  'Course_co-ordinator_homeController', 'Student_co-ordinator_homeController','CoursewisestudentListcontroller'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      cordova.plugins.Keyboard.disableScroll(true);
+
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+    db.sync(remoteDB, {live : true, retry : true});
+  });
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+    .state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/menu.html',
+    controller: 'AppCtrl'
+  })
+
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+
+  .state('app.browse', {
+      url: '/browse',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/browse.html'
+        }
+      }
+    })
+    .state('app.playlists', {
+      url: '/playlists',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+
+  .state('app.student', {
+    url: '/student/:Id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/student.html',
+        controller: 'StudentCtrl'
+      }
+    }
+  })
+  .state('app.course', {
+    url: '/course/:Id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/course.html',
+        controller: 'CourseCtrl'
+      }
+    }
+  })
+  .state('app.courseview', {
+    url: '/courseview/:Id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/courseview.html',
+        controller: 'CourseCtrl'
+      }
+    }
+  })
+  .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginController'
+        }
+      }
+    })
+  .state('app.student_co-ordinator_home', {
+      url: '/student_co-ordinator_home',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/student_co-ordinator_home.html',
+          controller: 'Student_co-ordinator_homeController'
+        }
+      }
+    })
+
+  .state('app.course_co-ordinator_home', {
+    url: '/course_co-ordinator_home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/course_co-ordinator_home.html',
+        controller: 'Course_co-ordinator_homeController'
+      }
+    }
+  })
+ .state('app.coursewisestudentlist', {
+    url: '/coursewisestudentlist/:Id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/coursewisestudentlist.html',
+        controller: 'CourseWiseStudentListCtrl'
+      }
+    }
+  })
+  ;
+  // if none of the above states are matched, use this as the fallback
+  // $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/login');
+});

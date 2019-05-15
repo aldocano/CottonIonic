@@ -1,0 +1,78 @@
+{
+	"cotton_crop_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Cotton Crop Details",
+		"stapleTypeId": 41,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Staple",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"staplePreSowing",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Area under production(ha)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"areaUnderProductionPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Mid season",
+				"key":"areaUnderProductionMidSeason",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"areaUnderProductionPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Yield estimate(In kg/hectare)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"yieldEstimatePreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Mid season",
+				"key":"yieldEstimateMidSeason",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			}
+		]
+	}
+}

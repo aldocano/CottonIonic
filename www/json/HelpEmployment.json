@@ -1,0 +1,16 @@
+[{
+	"Farmer":"1",
+	"Husband/Wife":"2",
+	"Not Paid (ex. Relatives excluding farmer and husband/ wife))":"3",
+	"Paid (ex. Labor)": "4",
+	"Children < 14 yrs of age)": "5"
+
+},
+{
+	"Helping/ Employed*":true,
+	"Land Preparation**":"number",
+	"Sowing**": "number",
+	"Weeding**": "number",
+	"Manure & Botanical application**": "number",
+	"Picking**": "number"
+}]

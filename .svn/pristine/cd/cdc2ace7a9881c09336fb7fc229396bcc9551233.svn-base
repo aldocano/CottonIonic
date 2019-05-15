@@ -1,0 +1,45 @@
+{
+	"meeting_attended_by": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Meeting Attended By Farmer",
+		"subjectTypeId": 50,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Meeting. No. "
+			}
+		],
+		"details": [
+			
+
+			{
+				"name": "Attended by farmer",
+				"type": 1,
+				"has_child": false,
+				"value":" "
+			},
+			{
+				"name": "Date of meeting",
+				"type": 2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Subject of meeting",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			}
+		],
+		"child_details": [
+
+		]
+	}
+}

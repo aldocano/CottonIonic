@@ -1,0 +1,171 @@
+{
+	"manure_application": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Manure Application Details",
+		"manureDetailsTypeId": 10,
+		"manureSourceTypeId": 11,
+		"pre_table_data":[],
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}							
+		],
+		"details": [
+			
+			{
+				"name": "Manure",
+				"type": 4.1,
+				"has_child": false,
+				"value": "Tap" 
+			},
+			{
+				"name": "Source",
+				"type": 4.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"key":"areaCovered",
+				"name": "Field /Area covered(ha)",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Quantity (Kg)",
+				"type": 5,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Material Cost(In Rs.)",
+				"type": 6,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Labor Cost(In Rs.)",
+				"type": 6,
+				"has_child": false,
+				"value": " "
+			}			
+		],
+		"child_details": [
+					
+		],
+		"select_details":[
+			{
+				"parent":"Manure",
+				"name":"Neem seed cake"
+			},
+			{
+				"parent":"Manure",
+				"name":"Amrut pani"
+			},
+			{
+				"parent":"Manure",
+				"name":"Beejamrut"
+			},
+			{
+				"parent":"Manure",
+				"name":"Bio Dynamic Preparations"
+			},
+			{
+				"parent":"Manure",
+				"name":"Crop residues in manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Decomposed cow dung"
+			},
+			{
+				"parent":"Manure",
+				"name":"Poultry manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Vermi-wash"
+			},
+			{
+				"parent":"Manure",
+				"name":"Vermi-compost"
+			},
+			{
+				"parent":"Manure",
+				"name":"Raw manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Farm yard manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Compost manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Farm yard manure"
+			},
+			{
+				"parent":"Manure",
+				"name":"Sunflower - oil seed cake"
+			},
+			{
+				"parent":"Manure",
+				"name":"Groundnut - oil seed cake"
+			},
+			{
+				"parent":"Manure",
+				"name":"Castor - oil seed cake"
+			},
+			{
+				"parent":"Manure",
+				"name":"Micronutrient"
+			},
+			{
+				"parent":"Manure",
+				"name":"Limestone"
+			},
+			{
+				"parent":"Manure",
+				"name":"Gypsum"
+			},
+			{
+				"parent":"Manure",
+				"name":"Sodium Chloride"
+			},
+			{
+				"parent":"Manure",
+				"name":"Calcium chloride"
+			},
+			{
+				"parent":"Manure",
+				"name":"Bio-fertilizers"
+			},
+			{
+				"parent":"Source",
+				"name":"Self-Made"
+			},
+			{
+				"parent":"Source",
+				"name":"Bought from Market"
+			},
+			{
+				"parent":"Source",
+				"name":"Both"
+			},
+			{
+				"parent":"Source",
+				"name":"NA"
+			}
+		]
+	}
+}

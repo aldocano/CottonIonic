@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="village in villages">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="village.checked"
+        ng-checked="village.checked" ng-change="changeVillage({{$index}})">   
+      </label><h2 class="popup_label">{{village.village_Name}}</h2>        
+    </div>
+</div>

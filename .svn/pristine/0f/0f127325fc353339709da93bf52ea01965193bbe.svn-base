@@ -1,0 +1,81 @@
+{
+	"pesticide_application_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Bio-Pesticide/ Insecticide/ Fungicide application details for organic/in-conversion cotton farm",
+		"pesticidesTypeId": 20,
+		"sourceTypeId":21,
+		"targetPestTypeId": 22,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Pesticides",
+				"type": 4.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Source",
+				"type": 4.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Target pest",
+				"type": 4.3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"key":"farmArea",
+				"name": "Area(ha)",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "No of pumps/ha",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "ml/pump",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Cost (in Rs)",
+				"has_child": true,
+				"has_select": false
+			}				
+		],
+		"child_details": [
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Bio-Pesticides",
+				"type": 5,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Labor",
+				"type": 5,
+				"value": " "
+			}
+		]
+	}
+}

@@ -1,0 +1,111 @@
+{
+	"selling_othersource": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Selling and other source of income",
+		"other_source_of_incomeTypeId": 37,
+		"month_of_selling_TypeId": 35,
+		"NOCTypeId": 6,
+		"soldtoTypeId": 36,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[],		
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"activities_details":[
+			{
+				"name":"Month of selling and quantity of crop produce(in quintal)",
+				"type":7.1,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Name of Crop/Harvest sold",
+				"type":7.2,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Sold to",
+				"type":7.3,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Quantity(in quintal)",
+				"type":3.1,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Rate(rupees/quintal)",
+				"type":3,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Transport Charges",
+				"type":3,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			},
+			{
+				"name":"Other Charges(labor etc.)",
+				"type":3,
+				"has_child":false,
+				"has_select":false,
+				"value":" "
+			}
+		],
+		"details": [
+			{   
+				"name": "Do you grow crop other than cotton in organic/in-conversion farm?",
+				"type": 7.1,
+				"has_child": false,
+				"has_select": false,
+				"value": false
+			},
+			{
+				"name": "Do you have any other source of income from growing other crop?",
+				"type": 7.2,
+				"has_child": false,
+				"has_select": false,
+				"value": false
+			},
+			{   
+				"name":"Source of income other than crops",
+				"type": 4,
+				"has_child": false,
+				"has_select": true,
+				"value": " ",
+				"status": true
+			},
+			{
+				"name": "Total annual income from other source of income",
+				"type": 2,
+				"has_child": false,
+				"has_select": false,
+				"value": " ",
+				"status": true
+			}
+		],
+		"child_details": [
+			
+		],
+		"select_details":[]
+	}
+}

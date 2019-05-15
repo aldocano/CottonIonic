@@ -1,0 +1,11 @@
+<ion-nav-bar class="header_color bn" ng-style={{headerheight_Style}}>
+	<ion-nav-buttons side="left">
+		<button ng-show="expression()" class="button button-icon button-clear ion-navicon" ng-click="openDrawer()" style="color: #032461;">
+		</button>
+	</ion-nav-buttons>
+	
+	<ion-nav-buttons side="right" >	
+		<i class="icon ion-home custom-icon" ng-click="home()" ng-show="homeFlag()" style={{homeicon_Style}} ></i>	
+	</ion-nav-buttons>
+</ion-nav-bar>
+<ion-nav-view name="menuContent"></ion-nav-view>

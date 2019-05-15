@@ -1,0 +1,78 @@
+<ion-view view-title={{title.name}} >
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Help/Employment</span>
+</ion-nav-title>
+  <ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style" >
+
+  <div class="row body_bg" ng-repeat="data in help_employement_obj.pre_table_data">
+      <div class="row">
+        <div class="col col-60 inputTypeText" style="width: 100%">
+          {{data.label}}
+        </div>
+        <input type="number" ng-pattern="/^[0-9]{1,3}?$/" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ng-keyup="integerValidation(data,'',data.value,'pre_table_data')" class="col inputTypeText1" ng-show="data.type == 11" ng-model="data.value" ng-disabled= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+      </div>
+
+   </div> 
+    <ion-list>
+    <div ng-repeat="activity in help_employement_obj.activities">
+      <ion-item class="item-stable acc_text" ng-click="toggleGroup(activity)"
+                ng-class="{active: isGroupShown(activity)}">
+          <i class="icon" ng-class="isGroupShown(activity) ? 'ion-minus' : 'ion-plus'" style="
+    background: #16C0F3;"></i>
+        &nbsp;
+     <span>{{activity.name}}</span>
+         </ion-item>
+      <div class="list_div item-accordion"
+                  ng-repeat="item in activity.details"
+                  ng-show="isGroupShown(activity)">
+                  
+	      <div class="row" ng-if="activity.name == 'Farmer' || activity.name == 'Husband/wife'">       
+            <div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'" style="width: 100%">{{item.name}}</div>
+            <input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="2" ng-keyup="integerValidation(activity,item,item.value,'activities')"    class="col" ng-show="item.type == 11"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">
+
+            <div class="col pad_zero" ng-show="item.type == 2" ng-class="flag?'ab':'acc_input'">
+
+              <label class="checkbox" style="padding: 0; padding-top: 5%">
+                <input type="checkbox" ng-model="item.value" ng-disabled= "flag">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>    
+            <input type="text" maxlength="50" ng-model="item.value" ng-show="item.type == 1" class="col acc_input" ng-class="flag?'ab':'acc_input'" onpaste="return false;">     
+	      </div>
+        <div class="row" ng-if="activity.name == 'No. of Paid (ex. Labor)' || activity.name == 'No. of Children < 14 yrs of age' || activity.name == 'No. of Not Paid (ex. Relatives excluding farmer and husband/ wife)'">       
+            <div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'" style="width: 100%">{{item.name}}</div>
+            <input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ng-pattern="/^[0-9]{1,2}?$/" ng-keyup="integerValidation(activity,item,item.value,'activities')"    class="col" ng-show="item.type == 2"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" style="height: inherit;" onpaste="return false;">
+            <div class="col" ng-show="item.type == 11" style="background-color: #45BFAE; max-height: 34px; text-align: center" ng-class="flag?'ab':'acc_input'">
+
+              <label class="checkbox" style="margin-top: -8px">
+                <input type="checkbox" ng-model="item.value" ng-disabled= "flag">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>    
+            <input type="text" maxlength="50" ng-model="item.value" ng-show="item.type == 1" class="col acc_input" ng-class="flag?'ab':'acc_input'" onpaste="return false;">     
+        </div>   
+      </div>
+      
+    </div>
+  </ion-list>     
+  <pre>                  
+		  		  
+		  <!-- ng-keyup="numberValidation(activity,item,item.value,'activities')" -->
+		  <!-- ng-keydown="numberValidation(activity,item,item.value,'activities');integerValidation(activity,item,item.value,'activities')" -->
+		  
+		  
+		  
+		  
+    </pre>
+  </ion-content>
+  <div class="bar bar-footer">
+	<div class="row" style="padding: 0px;margin-top: -7px;">
+		<button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+		<button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+	</div>
+  </div>
+</ion-view> 

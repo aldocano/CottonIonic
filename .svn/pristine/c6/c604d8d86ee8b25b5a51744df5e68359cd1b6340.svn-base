@@ -1,0 +1,24 @@
+angular.module('starter.coursecontroller', [])
+.controller('CourseCtrl', function($scope, $stateParams) {
+
+		$scope.doSubmit = function(courseData) {
+		      
+		      db.get('course').then(function(doc) {
+		        var CourseArr=[];
+		        CourseArr=doc.records;
+		        courseData.id=new Date().toJSON();
+		        CourseArr.push(courseData)
+		        return db.put({
+		          _id: 'course',
+		          _rev: doc._rev,
+		          records: CourseArr
+		        });
+		      }).then(function(response) {
+		        // handle response
+		        console.log("entry success");
+		      }).catch(function (err) {
+		        console.log(err);
+		      });
+
+		    };
+});

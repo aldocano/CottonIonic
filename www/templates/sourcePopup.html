@@ -1,0 +1,8 @@
+<div class="list">
+<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="sa in sourceArray">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="sa.checked"
+        ng-checked="sa.checked" ng-change="changeSource({{$index}})">   
+      </label><h2 class="popup_label">{{sa.name}}</h2>        
+    </div>
+</div>

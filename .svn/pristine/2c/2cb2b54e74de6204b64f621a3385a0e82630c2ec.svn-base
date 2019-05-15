@@ -1,0 +1,119 @@
+{
+	"land_holding_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Landholding Details",
+		"sourceOfIrrigationTypeId": 39,
+		"typeOfIrrigationTypeId": 40,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Own land(In Hectare)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"ownLandPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"ownLandPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Leased land(In Hectare)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"leasedLandPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"leasedLandPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Irrigated land",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"irrigatedLandPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"irrigatedLandPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Source of irrigation",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"sourceOfIrrigationPreSowing",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"sourceOfIrrigationPostHarvest",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Type of irrigation",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"typeOfIrrigationPreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"typeOfIrrigationPostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": "Tap"
+			}	
+		]
+	}
+}

@@ -1,0 +1,167 @@
+
+angular.module('starter.studentcontroller', [])
+.controller('StudentCtrl', function($scope, $stateParams,$ionicPopup,PouchDBListener) {
+ $scope.student = [];
+
+
+    db.get('course').then(function (doc) {
+      var courseArrList=[];
+      courseArrList=doc.records;
+      courseArrList.checked=false;
+     $scope.courseList=courseArrList;
+    }).catch(function (err) {
+      console.log(err);
+    });
+
+    $scope.doSubmit = function(studentData) {
+      
+      db.get('student').then(function(doc) {
+        var StudentArr=[];
+        StudentArr=doc.records;
+        studentData.id=new Date().toJSON();
+        studentData.course=$scope.course;
+        StudentArr.push(studentData)
+        return db.put({
+          _id: 'student',
+          _rev: doc._rev,
+          records: StudentArr
+        });
+      }).then(function(response) {
+        // handle response
+        console.log("entry success");
+      }).catch(function (err) {
+        console.log(err);
+      });
+
+    };
+
+    $scope.$on('add', function(event, todo) {
+        $scope.student.push(todo);
+    });
+
+
+   $scope.courseList = [
+    { text: "HTML5", checked: false },
+    { text: "CSS3", checked: false },
+    { text: "JavaScript", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+  
+  $scope.pushNotification = { checked: true };
+  $scope.emailNotification = 'Subscribed';
+
+
+  $scope.showPopup = function() {
+
+       $scope.data = {}
+
+       var myPopup = $ionicPopup.show({
+          template: ' <div class="list"> <ion-checkbox ng-repeat="item in courseList"  ng-model="item.checked"  ng-checked="item.checked"> {{ item.name }}</ion-checkbox> </div>',
+          title: 'Course',
+          scope: $scope,
+          buttons: [{
+
+             text: 'Ok',
+             onTap: function(e) {
+               var courseArr=[];
+               angular.forEach($scope.courseList, function(value, key){
+                   if (value.checked==true) {
+                   courseArr.push(value.name);
+                   $scope.course=courseArr;
+                   }else{
+                    $scope.course=courseArr;
+                  }
+                  
+               });
+
+             }
+          }, {
+             text: '<b>Select All</b>',
+             type: 'button-positive',
+             onTap: function(e) {
+               var courseArr=[];
+               angular.forEach($scope.courseList, function(value, key){
+                   $scope.courseList[key].checked=true;
+                   courseArr.push(value.name);
+                   $scope.course=courseArr;
+               });
+
+             }
+
+          }, ]
+
+       });
+
+   };
+
+
+})
+.factory('PouchDBListener', ['$rootScope', function($rootScope) {
+
+  db.sync(remoteDB, {live: true, retry: true})
+         .on('change', function(change){
+
+          if(change.change.docs[0]){
+            if (!change.change.docs[0]._deleted) {
+                $rootScope.$apply(function() {
+                    db.get(change.change.docs[0]._id, function(err, doc) {
+                        $rootScope.$apply(function() {
+                            if(err){
+                              alert(err);
+                            }else {
+                              $rootScope.$broadcast('add', doc);
+                            }
+
+                        });
+
+                    });
+
+                });
+
+            } else {
+                $rootScope.$apply(function() {
+                    $rootScope.$broadcast('delete', change.change.docs[0]._id);
+                });
+
+            }
+
+          }
+
+         })
+         .on('paused', function(info){
+           console.log(info);
+
+         })
+         .on('active', function(info){
+           console.log(info);
+
+         })
+         .on('error', function(err){
+           console.log(err);
+
+         });
+
+        db.allDocs({
+                      include_docs: true,
+                      attachments: true
+                    }).then(function (result) {
+                      // handle result
+                      var todos = result.rows.map(function(row) {
+                                                      return row.doc;
+                                                 });
+
+                      $rootScope.$apply(function() {
+                                           $rootScope.$broadcast('list', todos);
+                                       });
+
+                    }).catch(function (err) {
+                      alert(err);
+
+                    });
+
+      return true;
+
+}]);

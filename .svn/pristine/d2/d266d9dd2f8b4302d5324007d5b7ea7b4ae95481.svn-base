@@ -1,0 +1,24 @@
+<ion-view view-title="Student">
+  <ion-content>
+    <form ng-submit="doSubmit(studentData)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="studentData.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">DateOfBirth</span>
+          <input type="date" ng-model="studentData.dob">
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Courses</span>
+          <input type="text" ng-model="course" ng-click="showPopup()">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

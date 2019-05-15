@@ -1,0 +1,17 @@
+<ion-view view-title="View">
+  <ion-content>
+     <ion-list>
+     	<div class="row">
+			<div class="col col-50">Name</div>
+			<div class="col col-50">Description</div>
+		</div>
+      <ion-item ng-repeat="list in courseList" ng-click="Goclick(list.id)" >
+        
+		<div class="row">
+			<div class="col col-50">{{list.name}}</div>
+			<div class="col">{{list.description}}</div>
+		</div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

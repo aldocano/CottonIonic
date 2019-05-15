@@ -1,0 +1,11 @@
+<ion-view view-title="Menu">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" ng-click="Goclick(playlist.id)" >
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+

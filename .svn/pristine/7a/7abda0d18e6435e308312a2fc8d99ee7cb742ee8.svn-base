@@ -1,0 +1,41 @@
+angular.module("LoginController", []).
+controller('LoginController', ['$scope','MainService', '$rootScope', '$ionicPopup', '$location',
+	function($scope, MainService, $rootScope, $ionicPopup, $location){
+	$scope.loginData = {
+		username: "",
+		password: ""
+	};
+	$scope.doLogin = function(){
+		MainService.doLogin($scope.loginData);		
+	};
+
+	$rootScope.$on('login_result', function(event, data){
+		if(data){
+			switch(data){
+				case 1: 
+					$location.path('app/course_co-ordinator_home');
+					$scope.$apply();
+					break;
+				default:
+					$location.path('app/student_co-ordinator_home');
+					$scope.$apply();
+					break;
+			}
+		}else{
+			var my_popup = $ionicPopup.show({
+				template: 'Invalid Username or Password!',
+				title: 'Warning',
+				scope: $scope,
+				buttons: [
+					{
+						text: 'Ok',
+						type: 'button-positive',
+						onTap: function(e){
+							my_popup.close;
+						}
+					}
+				]
+			});
+		}
+	});
+}]);

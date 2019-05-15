@@ -1,0 +1,8 @@
+<div class="list">
+<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="man in manureArray">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="man.checked"
+        ng-checked="man.checked" ng-change="changeCS({{$index}})">   
+      </label><h2 class="popup_label">{{man.name}}</h2>        
+    </div>
+</div>

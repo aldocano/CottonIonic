@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/ionic.contrib.drawer.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/ionic.contrib.drawer.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+   
+    <script src="js/ng-cordova.min.js"></script>
+     <script src="cordova.js"></script>
+    <!-- pouchdb js -->
+    <script src="js/pouchdb-5.3.1.min.js"></script>
+    <!-- <script src="js/pouchdb.find.js"></script> -->
+    <!-- your app's js -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/messages.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ionic-datepicker.bundle.min.js"></script>
+    <script src="lib/angular-md5/angular-md5.js"></script>
+    
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/menuController.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/sowingCostController.js"></script>
+    <script src="js/controllers/helpEmploymentController.js"></script>
+    <script src="js/controllers/soilPreparationController.js"></script>
+    <script src="js/controllers/waterUseController.js"></script>
+    <script src="js/controllers/irrigationDetailsController.js"></script>
+    <script src="js/controllers/manureApplicationController.js"></script>
+    <script src="js/controllers/landDetailsController.js"></script>
+    <script src="js/controllers/sidemenuController.js"></script>
+    <script src="js/controllers/weedingDetailsController.js"></script>
+    <script src="js/controllers/utilController.js"></script>
+    <script src="js/controllers/landAndIrrigationController.js"></script>
+    <script src="js/controllers/estimationController.js"></script>
+    <script src="js/controllers/cottonPickingHarvestingController.js"></script>
+    <script src="js/controllers/trainingsAttendedByController.js"></script>
+    <script src="js/controllers/meetingAttendedByController.js"></script>
+    <script src="js/controllers/pesticideApplicationDetailsController.js"></script>
+    <script src="js/controllers/bestpracticesDecentworkController.js"></script>
+    <script src="js/controllers/laborsRecordController.js"></script>
+    <script src="js/controllers/sellingOthersourceController.js"></script>
+    <script src="js/controllers/farmerHouseholdDetailsController.js"></script>
+    <script src="js/controllers/landHoldingDetailsController.js"></script>
+    <script src="js/controllers/cottonCropDetailsController.js"></script>
+    <script src="js/controllers/livestockCattleOwnershipController.js"></script>
+    <script src="js/controllers/assetOwnershipController.js"></script>
+    <script src="js/controllers/educationalHousingDetailsController.js"></script>
+    <script src="js/controllers/additionalDetailsController.js"></script>
+    <script src="js/controllers/sustainablePracticesController.js"></script>
+    <script src="js/controllers/syncStatusController.js"></script>
+    <script src="js/services/mainService.js"></script>
+    <script src="js/services/mainServiceHelper.js"></script>
+    <script src="js/services/valueServices.js"></script>
+    
+  </head>
+
+<body ng-app="starter" ng-controller="SidemenuController">
+	<drawer ng-show="expression()" side="left">
+		<ion-header-bar align-title="center" style="background: #032461;">
+			<h1 class="title" style="color: white!important">CottonConnect</h1>
+		</ion-header-bar>  
+		<ion-content>
+			<ion-list>
+				<ion-item menu-close href="#" ng-click="sync()">
+					Sync
+				</ion-item>
+                <ion-item menu-close href="#" ng-click="syncStatus()">
+                    Sync Status
+                </ion-item>
+				<ion-item menu-close href="#" ng-click="logout()">
+					 Log Out
+				</ion-item>
+			</ion-list>
+		</ion-content> 
+	</drawer>
+	<ion-nav-view></ion-nav-view>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="moa in moaArray">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="moa.checked"
+        ng-checked="moa.checked" ng-change="changeMoa({{$index}})">   
+      </label><h2 class="popup_label">{{moa.name}}</h2>        
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+	"Sr. No.": null,
+	"Area(Ha)":null,
+	"Seed Variety*":null,
+	"Total Qty. Used (Kg.)":null,
+	"Total Cost (In Rs.)":
+	[
+		{
+			"Seed Cost":null,
+			"Labor":null
+		}
+	],
+	"Total cost (INR)":null
+}	

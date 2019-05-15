@@ -1,0 +1,157 @@
+{
+	"farmer_household_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Farmer Household Details",
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Number of adult males in household(Above 18 years)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "adultMalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "adultMalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Number of adult females in household(Above 18 years)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "adultFemalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "adultFemalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Male (Number of children in household(Below 18 years))",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "childrenMalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "childrenMalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Female (Number of children in household(Below 18 years))",
+				"type": 2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Pre sowing",
+				"key": "childrenFemalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "childrenFemalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Male (Number of School-going children in household(Below 18 years))",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "schoolGoingMalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "schoolGoingMalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Female (Number of School-going children in household(Below 18 years))",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "schoolGoingFemalePresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "schoolGoingFemalePostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Number of household members migrated for worked last year",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key": "migratedPresowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key": "migratedPostharvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			}		
+		]
+	}
+}

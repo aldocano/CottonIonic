@@ -1,0 +1,71 @@
+<ion-view view-title="Best practices/Decent work">
+	<ion-nav-title ng-style={{title_Style}}>
+	    <span>Best practices/Decent work</span>
+	</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style">
+    <ion-list>
+    	<div ng-repeat="data in bestpractices_decentwork_obj.details">
+	    	<div class="row">
+	      		<div class="col col-60 acc_body" ng-class = "data.is_parent?'a':'b'">{{data.name}}</div>
+	      		<!-- for 1st and 3rd -->
+	      		<div class="col pad_zero" ng-show="data.type == 7" ng-class="flag?'ab':'acc_input'">
+            		<label class="checkbox">
+                   		<input type="checkbox" ng-model="data.value" ng-disabled= "flag" class="mrtop13" ng-click="flag_en_ds(data)"">
+                    	<div class="track">
+                    		<div class="handle"></div>
+                    	</div>
+                	</label>
+            	</div>
+            	<!-- for 2nd -->
+            	<div class="col inputTypeText1" ng-show="data.type == 4.1" ng-class="flag?'ab':'acc_input'">
+	                <select id="sec_id" ng-model="data.value"  
+	                  ng-options="obj.name as obj.name for obj in kindOfProtectionClothing"
+	                  ng-change="getChange(data,'2nd',data.value)"
+	                  ng-show="data.type == 4.1" class="col dd_wrap" 
+	                  ng-disabled= "data.status || flag"
+	                  ng-class="data.status || flag?'ab':'acc_input'" multiple="multiple"
+	                  required>
+	                </select>
+           		</div>
+           		<!-- for 4th -->
+            	<div class="col inputTypeText1" ng-show="data.type == 4.2" ng-class="flag?'ab':'acc_input'">
+	                <select id="where_id" ng-model="data.value"  
+	                  ng-options="obj.name as obj.name for obj in whereYouStore"
+	                  ng-change="getChange(data,'4th',data.value)"
+	                  ng-show="data.type == 4.2" class="col dd_wrap" 
+	                  ng-disabled= "data.status || flag"
+	                  ng-class="data.status || flag?'ab':'acc_input'" multiple="multiple"
+	                  required>
+	                </select>
+           		</div>
+           		<!-- for 5th -->
+            	<div class="col inputTypeText1" ng-show="data.type == 4.3" ng-class="flag?'ab':'acc_input'">
+	                <select id="how_id" ng-model="data.value"  
+	                  ng-options="obj.name as obj.name for obj in howDoYouDeal"
+	                  ng-change="getChange(data,'5th',data.value)"
+	                  ng-show="data.type == 4.3" class="col dd_wrap" 
+	                  ng-disabled= "flag"
+	                  ng-class="flag?'ab':'acc_input'" multiple="multiple"
+	                  required>
+	                </select>
+           		</div>
+	      	</div>
+      	</div>	
+    </ion-list>
+    <pre>                  
+		  		  
+		  
+		  
+		  
+		  
+		  
+		  
+    </pre>
+	</ion-content>
+	<div class="bar bar-footer">
+		<div class="row" style="padding: 0px;margin-top: -7px;">
+			<button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			<button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		</div>
+	</div>
+</ion-view>	

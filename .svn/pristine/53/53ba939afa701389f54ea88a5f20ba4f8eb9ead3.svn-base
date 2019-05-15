@@ -1,0 +1,47 @@
+{
+	"sowing_cost":{
+		"activities":[
+{
+	"sr_no": 1,
+	"area":null,
+	"seed_variety":null,
+	"total_qty_used_kg":null,
+	"total_cost_in_rs":
+	
+		{
+			"seed_cost":"233",
+			"labor":null
+		}
+	,
+	"total_cost_inr":null
+},
+{
+	"sr_no": 2,
+	"area":null,
+	"seed_variety":null,
+	"total_qty_used_kg":null,
+	"total_cost_in_rs":
+	
+		{
+			"seed_cost":null,
+			"labor":null
+		}
+	,
+	"total_cost_inr":null
+},
+{
+	"sr_no": 3,
+	"area":null,
+	"seed_variety":null,
+	"total_qty_used_kg":null,
+	"total_cost_in_rs":
+	
+		{
+			"seed_cost":null,
+			"labor":null
+		}
+	,
+	"total_cost_inr":null
+}]	
+}
+}

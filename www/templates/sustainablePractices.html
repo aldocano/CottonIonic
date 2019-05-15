@@ -1,0 +1,71 @@
+<ion-view view-title="Sustainable Practices">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Sustainable Practices</span>
+</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style">
+    <ion-list>
+        <div ng-repeat="activity in sustainable_practices_obj.activities">
+          <ion-item class="item-stable acc_text"
+                    ng-click="toggleGroup(activity)" 
+                    style="background: #A18154;"
+                    ng-class="{active: isGroupShown(activity)}">
+              <i class="icon" ng-class="isGroupShown(activity) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{activity.name}}
+          </ion-item>
+          <div class="list_div item-accordion" ng-repeat="item in activity.details" ng-show="isGroupShown(activity)">
+            <div class="row">      
+              <div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'">{{item.name}}</div>          
+              <!-- for practices -->
+              <div class="col inputTypeText1" ng-show="item.type == 4.1" ng-class="flag?'ab':'acc_input'">
+              <select ng-model="item.value" 
+                ng-options="obj.name as obj.name for obj in practicesArray "
+                ng-change="getChange(activity,item,'practices',item.value)"
+                ng-show="item.type == 4.1" class="col dd_wrap" ng-class="flag?'ab':'acc_input'" 
+                ng-disabled="flag" required>
+                <option value="">Select</option>
+              </select>
+              </div>
+              <!-- for practice month -->
+              <div class="col inputTypeText1" ng-show="item.type == 4.2" ng-class="flag?'ab':'acc_input'">
+              <select ng-model="item.value" 
+                ng-options="obj.name as obj.name for obj in practiceMonthArray "
+                ng-change="getChange(activity,item,'pracMonth',item.value)"
+                ng-show="item.type == 4.2" class="col dd_wrap" ng-class="flag?'ab':'acc_input'" 
+                ng-disabled="flag" required>
+                <option value="">Select</option>
+              </select>
+              </div>
+              <div class="col pad_zero" ng-show="item.type == 1" ng-class="flag?'ab':'acc_input'">
+                <label class="checkbox">
+                      <input type="checkbox" ng-model="item.value" ng-disabled= "flag">
+                      <div class="track">
+                        <div class="handle"></div>
+                      </div>
+                  </label>
+              </div>
+            </div>
+          </div>
+        </div>
+    </ion-list>
+    <div style="float: right">
+      <table>
+        <tr>
+          <button class="ion icon ion-plus add_remove" ng-click="add()" ng-disabled="flag"></button>
+        </tr>
+        <tr>
+          <button class="ion icon ion-minus add_remove" ng-click="remove()" ng-disabled="flag"></button>
+        </tr>  
+      </table>    
+    </div>  
+    <pre>                  
+
+  	</pre>
+  </ion-content>
+    <div class="bar bar-footer">
+		  <div class="row" style="padding: 0px;margin-top: -7px;">
+			 <button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			 <button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		  </div>
+ 	  </div>
+</ion-view>

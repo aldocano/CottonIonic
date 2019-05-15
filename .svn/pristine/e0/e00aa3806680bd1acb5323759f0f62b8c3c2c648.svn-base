@@ -1,0 +1,108 @@
+{
+	"weeding_details": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Weeding Details",
+		"nameOfCropTypeId": 6,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Registered Cotton Farm no. "
+			}
+		],
+		"details": [
+			
+			{
+				"key":"cropName",
+				"name": "Crop Name",
+				"type": 1,
+				"has_child": false,
+				"value": "Tap",
+				"child_details": []
+			},
+			{
+				"key": "farmArea",
+				"name": "Farm Area(ha)",
+				"type": 2,
+				"has_child": false,
+				"value": " ",
+				"child_details": []
+			},
+			{
+				"name": "Weeding Details No.1",
+				"type": 4,
+				"has_child": true,
+				"value": 0,
+				"child_details": [{
+						"parent": "Weeding Details",
+						"name": "Date of Weeding",
+						"type": 4.1,
+						"has_child": false,
+						"value": "Tap"
+					},
+			        {
+			        	"parent": "Weeding Details",
+						"name": "Male labor",
+						"type": 4.2,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"parent": "Weeding Details",
+						"name": "Female labor",
+						"type": 4.2,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"parent": "Weeding Details",
+						"name": "Out of School Children",
+						"type": 4.2,
+						"has_child": false,
+						"value": " "
+					},	
+					{
+						"parent": "Weeding Details",
+						"name": "Mechanical",
+						"type": 4.4,
+						"has_child": false,
+						"value": " "
+					},
+					{
+						"name": "Cost (in Rs)",
+						"has_child": true,
+						"has_select": false
+					},
+                    {
+						"parent": "Weeding Details",
+						"name": "Labor",
+						"type": 4.3,
+						"value": " "
+					},
+					{
+						"parent": "Weeding Details",
+						"name": "Equipment",
+						"type": 4.3,
+						"value": " "
+					},
+					{
+						"parent": "Weeding Details",
+						"name": "Oil",
+						"type": 4.3,
+						"value": " "
+					}
+				]
+			}
+			
+		],
+		"child_details": [
+			
+		]
+	}
+}

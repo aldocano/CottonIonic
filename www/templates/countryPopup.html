@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="country in countries">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="country.checked"
+        ng-checked="country.checked" ng-change="changeCountry({{$index}})">   
+      </label><h2 class="popup_label">{{country.country_Name}}</h2>        
+    </div>
+</div>

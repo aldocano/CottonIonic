@@ -1,0 +1,13 @@
+<ion-view view-title="student_co-ordinator_home">
+  <ion-content style = "text-align: center;">
+    <div class="list">
+    	<div class="item">Add</div>
+    	<div class="item">Update</div>
+    	<div class="item">Remove</div>
+    	<div class="item">View</div>
+    </div>
+    <div class="list">
+    	<div class="item">Assign Course</div>    	
+    </div>
+  </ion-content>
+</ion-view>

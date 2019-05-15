@@ -1,0 +1,22 @@
+angular.module("MainService", []).
+service('MainService', ['$rootScope', function($rootScope){
+
+	this.doLogin = function(login_data){
+		db.get('user').
+		then(function(result){
+			var flag = 0;
+			for(var i = 0; i < result.records.length;i++){
+				if(result.records[i].username === login_data.username && 
+					result.records[i].password === login_data.password){
+					flag = result.records[i].role;
+					break;
+				}
+			}
+			$rootScope.$broadcast("login_result", flag);
+		}).
+		catch(function(error){
+			console.error("Error : " + error.status);
+		});
+	};
+	
+}]);

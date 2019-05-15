@@ -1,0 +1,128 @@
+<ion-view view-title="Selling and other source of income">
+	<ion-nav-title ng-style={{title_Style}}>
+	    <span>Selling and other source of income</span>
+	</ion-nav-title>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad has-footer" ng-style="content_Style">
+    	<ion-list>
+    	<div ng-repeat="data in selling_othersource_obj.details">
+	    	<div class="row">
+	      		<div class="col col-60 acc_body" ng-class = "data.is_parent?'a':'b'">{{data.name}}</div>
+	      		<!-- for 1st -->
+	      		<div class="col pad_zero" ng-show="data.type == 7.1" ng-class="flag?'ab':'acc_input'">
+            		<label class="checkbox">
+                   		<input type="checkbox" ng-model="data.value" ng-disabled= "flag" class="mrtop13">
+                    	<div class="track">
+                    		<div class="handle"></div>
+                    	</div>
+                	</label>
+            	</div>
+            	<!-- for 2nd -->
+	      		<div class="col pad_zero" ng-show="data.type == 7.2" ng-class="flag?'ab':'acc_input'">
+            		<label class="checkbox">
+                   		<input type="checkbox" ng-model="data.value" ng-disabled= "flag" class="mrtop13" ng-click="flag_soi(data)">
+                    	<div class="track">
+                    		<div class="handle"></div>
+                    	</div>
+                	</label>
+            	</div>
+            	<!-- for source of income -->
+            	<div class="col inputTypeText1" ng-show="data.type == 4" ng-class="flag?'ab':'acc_input'">
+	                <select id="soi_id" ng-model="data.value"  
+	                  ng-options="obj.name as obj.name for obj in other_source_of_income"
+	                  ng-change="getChange(data)"
+	                  ng-show="data.type == 4" class="col dd_wrap" 
+	                  ng-disabled= "data.status || flag"
+	                  ng-class="data.status || flag?'ab':'acc_input'" multiple="multiple"
+	                  required>
+	                </select>
+           		</div>
+           		<!-- for total annual income -->
+            	<input type="text" ng-pattern="/^[0-9]{1,6}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="floatValidation(data)" class="col pad_zero" ng-show="data.type == 2"  ng-model="data.value" ng-readonly= "data.status || flag" ng-class="data.status || flag?'ab':'acc_input'" onpaste="return false;" style="height: inherit;">
+	      	</div>
+	    </div>
+	    <div ng-repeat="activity in selling_othersource_obj.activities">
+			<ion-item class="item-stable acc_text"
+                    ng-click="toggleGroup(activity)"
+                    style="background: #A18154;"
+                    ng-class="{active: isGroupShown(activity)}">
+              <i class="icon" ng-class="isGroupShown(activity) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{activity.name}}
+            </ion-item>
+        <div class="list_div item-accordion"
+    	    ng-repeat="item in activity.details"
+            ng-show="isGroupShown(activity)">
+            <div class="row">
+  				<div class="col col-60 acc_body" ng-class = "item.is_parent?'a':'b'">{{item.name}}</div>
+  				<!-- for month of selling -->
+  				<div class="col inputTypeText1" ng-show="item.type == 7.1" ng-class="flag?'ab':'acc_input'">
+		          	<select ng-model="item.value"  
+		            	ng-options="obj.name as obj.name for obj in sellingMonth"
+		            	ng-change="getChange1(activity,item,'mos',item.value)"
+		            	ng-show="item.type == 7.1" class="col dd_wrap" 
+		            	ng-disabled= "flag"
+		            	ng-class="flag?'ab':'acc_input'" 
+		            	required>
+		            	<option value="">Select</option>
+		          	</select>
+		        </div>
+		        <!-- for noc -->
+  				<div class="col inputTypeText1" ng-show="item.type == 7.2" ng-class="flag?'ab':'acc_input'">
+		          	<select ng-model="item.value"  
+		            	ng-options="obj.name as obj.name for obj in NOC"
+		            	ng-change="getChange1(activity,item,'noc',item.value)"
+		            	ng-show="item.type == 7.2" class="col dd_wrap" 
+		            	ng-disabled= "flag"
+		            	ng-class="flag?'ab':'acc_input'" 
+		            	required>
+		            	<option value="">Select</option>
+		          	</select>
+		        </div>
+		        <!-- for sold to -->
+  				<div class="col inputTypeText1" ng-show="item.type == 7.3" ng-class="flag?'ab':'acc_input'">
+		          	<select ng-model="item.value"  
+		            	ng-options="obj.name as obj.name for obj in soldTo"
+		            	ng-change="getChange1(activity,item,'st',item.value)"
+		            	ng-show="item.type == 7.3" class="col dd_wrap" 
+		            	ng-disabled= "flag"
+		            	ng-class="flag?'ab':'acc_input'" 
+		            	required>
+		            	<option value="">Select</option>
+		          	</select>
+		        </div>
+		        <!-- for quantity -->
+		        <input type="text" ng-pattern="/^[0-9]{1,4}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="quantityValidation(activity, item.value)" class="col" ng-show="item.type == 3.1"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">
+		        <!-- for costs -->
+		        <input type="text" ng-pattern="/^[0-9]{1,6}(\.?|(\.[0-9]{1,2}))?$/" ng-keyup="costValidation($index, activity, item.value)" class="col" ng-show="item.type == 3"  ng-model="item.value" ng-readonly= "flag" ng-class="flag?'ab':'acc_input'" onpaste="return false;">
+  			</div>	
+        </div>    	     
+        </div>    
+	    </ion-list>
+
+	    <div style="float: right">
+	        <table>
+		        <tr>
+		          <button class="ion icon ion-plus add_remove" ng-click="add()" ng-disabled="flag"></button>
+		        </tr>
+		        <tr>
+		          <button class="ion icon ion-minus add_remove" ng-click="remove()" ng-disabled="flag"></button>
+		        </tr>  
+	        </table>  
+	    </div>
+	    <pre>                  
+		  		  
+		  
+		  
+		  
+		  
+		  
+		  
+    	</pre>  		
+    </ion-content>
+	<div class="bar bar-footer">
+		<div class="row" style="padding: 0px;margin-top: -7px;">
+			<button class="button col saveBtn"  ng-click='save()' ng-disabled="flag">Save</button>
+			<button class="button col submitBtn"  ng-click='submit()' ng-disabled="flag">Submit</button>
+		</div>
+	</div>
+</ion-view>    

@@ -1,0 +1,100 @@
+{
+	"educational_housing_details": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Educational And Housing Details",
+		"educationalfarmerTypeId": 45,
+		"housingTypeId": 46,
+		"drinkingWaterTypeId": 47,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Educational level of farmer",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"educationalLevelIdPreSowing",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Mid season",
+				"key":"educationalLevelIdMidSeason",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Housing",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"housingIdPreSowing",
+				"type": 3.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"housingIdPostHarvest",
+				"type": 3.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Electrified housing",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"electrifiedHousingPreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"electrifiedHousingPostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Drinking Water",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"drinkingWaterPreSowing",
+				"type": 3.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"drinkingWaterPostHarvest",
+				"type": 3.2,
+				"has_child": false,
+				"value": "Tap"
+			}
+		]
+	}
+}

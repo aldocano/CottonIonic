@@ -1,0 +1,76 @@
+{
+	"estimation": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Estimation of Production and Harvest Record",
+		"estimationNameOfCropTypeId": 6,
+		"estimationMOHEstimatedTypeId": 17,
+		"estimationMOHActualTypeId": 17,
+		"estimationCropStatusTypeId": 2,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[],	
+		"activities": [
+			{
+				"name": "Registered Cotton Farm no. "
+			}
+		],
+		"details": [
+			{   
+				"key":"landArea",
+				"name": "Farm area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Name of Crop",
+				"type": 4.1,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Month of Harvest",
+				"has_child": true
+			},
+			{   
+				"name": "Estimated Production (Kg)",
+				"type": 2,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{   
+				"name": "Actual Production (Kg)",
+				"type": 2,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			}
+		],
+		"child_details": [
+			{
+				"parent": "Month of Harvest",
+				"key":"Estimated",
+				"name": "Estimated",
+				"type": 11.1,
+				"value": " "
+			},
+			{
+				"parent": "Month of Harvest",
+				"key":"Actual",
+				"name": "Actual",
+				"type": 11.2,
+				"value": " "
+			}
+		],
+		"select_details":[]
+	}
+}

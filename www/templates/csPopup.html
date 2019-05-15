@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="cs in landDetailCurrentStatus">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="cs.checked"
+        ng-checked="cs.checked" ng-change="changeCS({{$index}})">   
+      </label><h2 class="popup_label">{{cs.name}}</h2>        
+    </div>
+</div>

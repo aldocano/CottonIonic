@@ -1,0 +1,100 @@
+{
+	"asset_ownership": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Asset Ownership",
+		"agriculturalTypeId": 42,
+		"consumerTypeId": 43,
+		"vehicleTypeId": 44,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Agricultural implements",
+				"type": 2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Pre sowing",
+				"key":"agriculturalImplementsPreSowing",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Mid season",
+				"key":"agriculturalImplementsMidSeason",
+				"type": 3,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Consumer electronics",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"consumerElectronicsPreSowing",
+				"type": 3.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"consumerElectronicsPostHarvest",
+				"type": 3.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Vehicle",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"vehiclePreSowing",
+				"type": 3.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Post harvest",
+				"key":"vehiclePostHarvest",
+				"type": 3.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Cell phone",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"cellPhonePreSowing",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"cellPhonePostHarvest",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			}
+		]
+	}
+}

@@ -1,0 +1,12 @@
+		 <div ng-repeat="storeType in typeOfStorage | filter:query">
+			<div class="item item-checkbox item-checkbox-right" >
+			<label class="checkbox">
+			<input type="checkbox" ng-model="storeType.checked"
+			ng-checked="storeType.checked">   
+			</label><h2>{{storeType.name}}</h2>   
+			  
+			</div>
+	     </div>
+
+
+

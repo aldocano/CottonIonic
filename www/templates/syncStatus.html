@@ -1,0 +1,36 @@
+<ion-view view-title="Sync Status Details">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Sync Status Details</span>
+</ion-nav-title>
+<ion-nav-buttons side="right">
+      <i class="ion icon ion-home custom-icon" ng-click="home()"></i>
+</ion-nav-buttons>
+<style type="text/css">
+  .red{
+    color: red;
+  }
+</style>
+	<ion-content ng-click="closeDrawer()" class="main_page_bg has-footer" ng-style="content_Style"> 
+    <ion-list>
+    <div class="list item-divider" ng-repeat="farmers in syncStatus" style="padding-bottom:0px;margin-bottom: 0px;">
+      <div class="item-divider" style="background-color: #032461;color:#ffffff">{{farmers.farmerName}}</div> 
+       <div ng-repeat="item in farmers.details">
+        <div class="row">
+          <div class="col col-20">Process:</div>
+          <div class="col">{{item.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col col-20">Status:</div>
+          <div class="col" ng-if="item.status=='Success'">{{item.msg}}</div>
+          <div class="col red" ng-if="item.status!='Success'">{{item.msg}}</div>
+        </div>
+       </div>
+    </div>
+    </ion-list>
+
+    <pre> 
+
+
+  	</pre>
+  </ion-content>
+</ion-view>

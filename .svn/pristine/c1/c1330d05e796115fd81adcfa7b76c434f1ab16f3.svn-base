@@ -1,0 +1,143 @@
+angular.module('starter.coursecontroller', [])
+.controller('CourseCtrl', function($scope, $stateParams,$timeout,$location,$state,$ionicHistory) {
+
+       $scope.courseData={};
+       $scope.Button="Submit";
+
+	    var newCorrectedArray=[];
+             $scope.courseList=[];
+		    db.get('course').then(function (doc) {
+		     $scope.courseList=doc.records;
+		     newCorrectedArray=doc.records;
+	         $scope.$apply();
+		    }).catch(function (err) {
+		      console.log(err);
+		    });
+		
+	    $scope.doSubmit = function(courseData) {
+               
+			if ($scope.Button=="Update") {
+				setTimeout(function () {
+				    var removeIndex = newCorrectedArray.map(function(item) { return item.id; }).indexOf($stateParams.Id);
+	               
+			        courseData.id=$stateParams.Id;
+				    newCorrectedArray.splice(removeIndex, 1,courseData);
+					db.get('course').then(function(doc) {
+					return db.put({
+					  _id: 'course',
+					  _rev: doc._rev,
+					  records: newCorrectedArray
+					});
+					}).then(function(response) {
+					// handle response
+
+					console.log("updated successfully");
+					$scope.courseData={};
+						
+							$scope.$apply(function () {
+			
+							   $location.path('app/course_co-ordinator_home');
+							  $ionicHistory.clearCache().then(function(){ $state.go('app.course_co-ordinator_home')})
+							});
+						
+
+					}).catch(function (err) {
+					console.log(err);
+					});
+				}, 500);
+			}else{
+
+	    	console.log(newCorrectedArray);
+
+		      db.get('course').then(function(doc) {
+		        var CourseArr=[];
+		        CourseArr=doc.records;
+		        courseData.id=new Date().toJSON();
+		        CourseArr.push(courseData)
+		        return db.put({
+		          _id: 'course',
+		          _rev: doc._rev,
+		          records: CourseArr
+		        });
+		      }).then(function(response) {
+
+		           console.log("entry successfully");
+		        	setTimeout(function () {
+						$scope.$apply(function () {
+						   $location.path('app/course_co-ordinator_home');
+						});
+					}, 100);
+
+		        $location.path('app/courseview/'+2);
+		      }).catch(function (err) {
+		        console.log(err);
+		      });
+             }
+		  };
+      var invalidEntries = 0;
+     if ($stateParams.Id.length > 2 ) {
+     	    $scope.Button="Update";
+			var viewArray=[];
+			db.get('course').then(function (doc) {
+			viewArray=doc.records;
+			}).catch(function (err) {
+			console.log(err);
+			});
+			 $timeout( function(){
+		    var updateData = viewArray.filter(function(obj) { if ($stateParams.Id == obj.id ) {
+			    return true;
+			  } else {
+			    invalidEntries++;
+			    return false;
+			  } });
+    
+		$scope.courseData={
+         name:updateData[0].name,
+         description:updateData[0].description
+
+		}
+	   },1000);
+     }
+
+
+	$scope.Delete=function(id){
+
+	 $timeout( function(){
+	 var removeIndex = newCorrectedArray.map(function(item) { return item.id; }).indexOf(id);
+	 newCorrectedArray.splice(removeIndex, 1);
+	         db.get('course').then(function(doc) {
+			        return db.put({
+			          _id: 'course',
+			          _rev: doc._rev,
+			          records: newCorrectedArray
+			        });
+			      }).then(function(response) {
+			        // handle response
+			        console.log("entry success");
+			      }).catch(function (err) {
+			        console.log(err);
+			      });
+
+	 }, 1000);
+	     
+	}
+
+
+
+    $scope.Goclick= function(id){
+
+      switch ($stateParams.Id) {
+            case "2":
+                $location.path('app/course/'+id);
+                break;
+            case "3":
+                $scope.Delete(id);
+                break;
+            case "5":
+                $location.path('app/coursewisestudentlist/'+id);
+                break;
+            default:
+
+        }
+    }
+});

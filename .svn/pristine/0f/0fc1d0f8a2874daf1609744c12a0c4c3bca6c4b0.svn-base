@@ -1,0 +1,315 @@
+{
+	"sowing_cost": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Sowing Cost",
+		"sowingNameOfCropTypeId": 6,
+		"sowingSourceOfSeedTypeId":7,
+		"sowingTypeOfSeedTypeId": 8,
+		"sowingSeedTreatmentDetailsTypeId": 9,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Name of Crop",
+				"type": 4.4,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Variety",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "No. of Packets",
+				"type": 11,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Quantity of seed used(in KG)",
+				"type": 5,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Date of sowing",
+				"type": 6,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Source of Seed",
+				"type": 4.1,
+				"has_child": false,
+				"value":"Tap"
+			},
+			{
+				"name": "Type of Seed",
+				"type": 4.2,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Seed treatment details, if any",
+				"type": 4.3,
+				"has_child": false,
+				"value": "Tap"
+			},															
+			{
+				"key":"farmArea",
+				"name": "Operational/farm area(ha)",
+				"type": 7,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Cost (in Rs)",
+				"has_child": true,
+				"has_select": false
+			}				
+		],
+		"child_details": [
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Seed",
+				"type": 3,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Labor",
+				"type": 3,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Equipment",
+				"type": 3,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Oil",
+				"type": 3,
+				"value": " "
+			}
+			
+		],
+		"select_details":[
+			{
+				"parent":"Source of seed",
+				"name":"Self",
+				"id" : 20
+			},
+			{
+				"parent":"Source of Seed",
+				"name":"ICS",
+				"id" : 21
+			},
+			{
+				"parent":"Source of Seed",
+				"name":"Market",
+				"id" : 22
+			},
+			{
+				"parent":"Source of Seed",
+				"name":"Public Institution",
+				"id" : 23
+			},
+			{
+				"parent":"Type of Seed",
+				"name":"Organic",
+				"id" : 24
+			},
+			{
+				"parent":"Type of Seed",
+				"name":"Conventional",
+				"id" : 25
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Untreated",
+				"id" : 26
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Treated by Cow Urine",
+				"id" : 27
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Rhizobium Culture",
+				"id" : 28
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Trichoderma",
+				"id" : 29
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"CPP",
+				"id" : 30
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Cow Dung",
+				"id" : 31
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Butter Milk",
+				"id" : 32
+			},
+			{
+				"parent":"Seed treatment details, if any",
+				"name":"Others",
+				"id":33
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Bajra",
+				"id":34
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Banana",
+				"id":35
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Black Gram",
+				"id":36
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Buffer Crop",
+				"id":37
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Castor",
+				"id":38
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Chick Pea",
+				"id":39
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Chilly",
+				"id":40
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Corn / Maize",
+				"id":41
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Groundnut",
+				"id":42
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Guava",
+				"id":43
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Jeera",
+				"id":44
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Jowar",
+				"id":45
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Moong",
+				"id":46
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Onion",
+				"id":47
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Other1 Specify____",
+				"id":48
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Other2 Specify____",
+				"id":49
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Other3 Specify____",
+				"id":50
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Other4 Specify____",
+				"id":51
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Paddy",
+				"id":52
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Pigeon Pea",
+				"id":57
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Sesame",
+				"id":58
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Soya",
+				"id":59
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Sugarcane",
+				"id":60
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Sunflower",
+				"id":61
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Turmeric",
+				"id":62
+			},
+			{
+				"parent":"Name of Crop",
+				"name":"Wheat",
+				"id":63
+			}
+		]
+	}
+}

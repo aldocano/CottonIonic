@@ -1,0 +1,92 @@
+{
+	"land_details": {
+		"submitted": false,
+		"farmerId": 0,
+		"farmerTimePeriodId": 0,
+		"title":"Land Details",
+		"landDetailCurrentStatusTypeId": 2,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[
+			{
+				"key":"toalArea",
+				"label": "Total area(ha)",
+				"type":3,
+				"value": ""
+			},
+			{
+				"key":"toalOArea",
+				"label": "Total organic area(ha)",
+				"type":3,
+				"value": ""
+			}
+		],		
+		"activities": [
+			{
+				"name": "Registered Cotton Farm no. "
+			}
+		],
+		"details": [
+			{   
+				"key":"landArea",
+				"name": "Land area(Ha)",
+				"type": 3,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "Survey No",
+				"type": 1,
+				"has_child": false,
+				"has_select": false,
+				"value": " "
+			},
+			{
+				"name": "GPS Coordinates",
+				"has_child": false,
+				"has_select": false,
+				"type": 10
+			},
+			{
+				"name": "Current Status",
+				"type": 4,
+				"has_child": false,
+				"has_select": true,
+				"value": "Tap"
+			}
+		],
+		"child_details": [
+			{
+				"parent": "GPS Coordinates",
+				"name": "Latitude",
+				"type": 8,
+				"value": " "
+			},
+			{
+				"parent": "GPS Coordinates",
+				"name": "Longitude",
+				"type": 9,
+				"value": " "
+			}
+		],
+		"select_details":[
+			{
+				"parent":"Current Status",
+				"name":"IC1"
+			},
+			{
+				"parent":"Current Status",
+				"name":"IC2"
+			},
+			{
+				"parent":"Current Status",
+				"name":"Organic"
+			}
+		]
+	}
+}

@@ -1,0 +1,120 @@
+<ion-view view-title="MainPage">
+<ion-nav-title ng-style={{title_Style}}>
+    <span>Main Page</span>
+</ion-nav-title>
+  <ion-content ng-click="closeDrawer()" class="main_page_bg ioncntnt_pad" ng-style="content_Style">
+    <ion-list>
+     <div class="body_bg">
+
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Name of project
+				</div>
+				<div class="col col-60 inputTypeText1" type="text" readonly="true">
+					{{main_obj.farmer.projectName}}
+				</div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Farmer Name
+				</div>
+				<div class="col col-60 inputTypeText1" type="text" readonly="true">
+					{{main_obj.farmer.farmerName}}
+				</div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Farmer code
+				</div>
+				<div class="col col-60 inputTypeText1" type="text" readonly="true">
+					{{main_obj.farmer.farmerCode}}
+				</div>
+			</div>
+		</div>
+		<div class="body_bg">
+			<div class="row">
+				<div class="col col-40 inputTypeText">
+					Village
+				</div>
+				<div class="col col-60 inputTypeText1" type="text" readonly="true">
+					{{main_obj.farmer.village}}
+				</div>
+			</div>
+		</div>							
+
+	</div>
+	<div class="tile">
+		<div class="row mh8 line_ht_4">
+		<div class="col col-40 main_page_col_1 mr8 mb5 tile_text" ng-click="click_to_form('0')">
+			Land Details
+			</div>
+			<div class="col main_page_col_2 mb5 tile_text" ng-click="click_to_form('1')">Help/Employment</div>
+		</div>
+
+		<div class="row mh8 line_ht_4">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text" ng-click="click_to_form('2')">Soil Preparation</div>
+			<div class="col main_page_col_4 mb5 tile_text" ng-click="click_to_form('3')">Sowing</div>
+		</div>
+
+		<div class="row mh8 line_ht_4">
+			<div class="col col-50 main_page_col_1 mr8 mb5 tile_text" ng-click="click_to_form('4')">
+				Water Use
+			</div>
+			<div class="col main_page_col_2 mb5 tile_text" ng-click="click_to_form('5')">
+				Irrigation Details
+			</div>	
+		</div>	
+
+		<div class="row mh8">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('6')">Fertilizer Application</div>
+			<div class="col main_page_col_4 mb5 tile_text ptop14" ng-click="click_to_form('7')">Land And Irrigation Details</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-50 main_page_col_1 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('8')">
+				Weeding Details
+			</div>
+			<div class="col main_page_col_2 mb5 tile_text ptop14" ng-click="click_to_form('9')">
+				Estimation of Production & Harvest record
+			</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text line_ht_1p2 ptop14" ng-click="click_to_form('10')">Cotton Picking/Harvesting Record For Registered Cotton Farm</div>
+			<div class="col main_page_col_4 mb5 tile_text ptop14" ng-click="click_to_form('11')">Trainings Attended By Farmer</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-50 main_page_col_1 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('12')">Meeting Attended By Farmer</div>
+			<div class="col main_page_col_2 mb5 tile_text line_ht_1p9" ng-click="click_to_form('13')">Bio-Pesticide/ Insecticide/ Fungicide application details for organic/in-conversion cotton farm</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('14')">Best practices/Decent work</div>
+			<div class="col main_page_col_4 mb5 tile_text line_ht_4" ng-click="click_to_form('15')">Labors record</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-50 main_page_col_1 mr8 mb5 tile_text ptop14" ng-click="click_to_form('16')">Selling and other source of income</div>
+			<div class="col main_page_col_2 mb5 tile_text line_ht_4" ng-click="click_to_form('25')">Sustainable Practices</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('17')">Farmer Household Details</div>
+			<div class="col main_page_col_4 mb5 tile_text line_ht_4" ng-click="click_to_form('18')">Landholding Details</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-50 main_page_col_1 mr8 mb5 tile_text ptop14" ng-click="click_to_form('19')">Cotton Crop Details</div>
+			<div class="col main_page_col_2 mb5 tile_text line_ht_4" ng-click="click_to_form('20')">Livestock and Cattle Ownership</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-60 main_page_col_2 mr8 mb5 tile_text line_ht_4" ng-click="click_to_form('21')">Asset Ownership</div>
+			<div class="col main_page_col_4 mb5 tile_text ptop14" ng-click="click_to_form('22')">Educational And Housing Details</div>
+		</div>
+		<div class="row mh8">
+			<div class="col col-100 main_page_col_1 mr8 mb5 tile_text ptop14" ng-click="click_to_form('23')">Additional Details</div>
+		</div>
+	</div>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

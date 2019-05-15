@@ -1,0 +1,122 @@
+{
+	"soil_preparation_cost": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Soil Preparation",
+		"landPreparationMonthTypeId": 5,
+		"landPreparationCultivationPracticesTypeId": 4,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[],		
+		"activities": [
+			{
+				"name": "Ploughing"
+			},
+			{
+				"name": "Harrowing"
+			},
+			{
+				"name": "Leveling"
+			},
+			{
+				"name": "Rotavator"
+			},
+			{
+				"name": "Pre-sowing irrigation"
+			},
+			{
+				"name": "Organic manure application"
+			}
+		],
+		"details": [
+			{
+				"name": "Activity performed",
+				"type": 2,
+				"has_child": false,
+				"value": 0
+			},
+			{
+				"name": "Month of activity",
+				"type": 4,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"key":"farmArea",
+				"name": "Operational/farm area(ha)",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "By means of Machinery and/or by labour",
+				"has_child": true
+			},
+			{
+				"name": "Cost (in Rs)",
+				"has_child": true
+			}			
+		],
+		"child_details": [
+			{
+				"parent": "By means of Machinery and/or by labour",
+				"name": "Tractor",
+				"type": 17,
+				"value": 0
+			},
+			{
+				"parent": "By means of Machinery and/or by labour",
+				"key":"Male",
+				"name": "Male",
+				"type": 11,
+				"value": " "
+			},
+			{
+				"parent": "By means of Machinery and/or by labour",
+				"key":"Female",
+				"name": "Female",
+				"type": 11,
+				"value": " "
+			},
+			{
+				"parent": "By means of Machinery and/or by labour",
+				"name": "Out of school Children",
+				"type": 11,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Labor",
+				"type": 5,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Equipment",
+				"type": 5,
+				"value": " "
+			},
+			{
+				"parent": "Cost (in Rs)",
+				"name": "Oil",
+				"type": 5,
+				"value": " "
+			}															
+		],
+		"select_details":[
+			{
+				"parent":"Month of activity",
+				"name":"April"
+			},
+			{
+				"parent":"Month of activity",
+				"name":"May"
+			}
+		]
+	}	
+}

@@ -1,0 +1,86 @@
+{
+	"help_employement": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"typeId": 3,
+		"title":"Help /Employment",
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[
+			{
+				"key":"numberOfMaleLabors",
+				"label": "Number of male laborers",
+				"type":11,
+				"value": ""
+			},
+			{
+				"key":"numberOfFemaleLabors",
+				"label": "Number of female laborers",
+				"type":11,
+				"value": ""
+			}
+		],
+		"activities": [
+			{
+				"name": "Farmer"
+			},
+			{
+				"name": "Husband/Wife"
+			},
+			{
+				"name": "No. of Not Paid (ex. Relatives excluding farmer and husband/ wife)"
+			},
+			{
+				"name": "No. of Paid (ex. Labor)"
+			},
+			{
+				"name": "No. of Children < 14 yrs of age"
+			}
+		],
+		"details": [
+			{
+				"key":"landPreparation",
+				"name": "Land Preparation",
+				"type": 2,
+				"has_child": false,
+				"value": ""
+			},
+			{
+				"key":"sowing",
+				"name": "Sowing",
+				"type": 2,
+				"has_child": false,
+				"value": ""
+			},
+			{
+				"key":"weeding",
+				"name": "Weeding",
+				"type": 2,
+				"has_child": false,
+				"value": ""
+			},
+			{
+				"key":"manureBotanicalapplication",
+				"name": "Manure & Botanical application",
+				"type": 2,
+				"has_child": false,
+				"value": ""
+			},
+			{
+				"key":"picking",
+				"name": "Picking",
+				"type": 2,
+				"has_child": false,
+				"value": ""
+			}
+		],
+		"child_details": [
+					
+		]
+	}
+}

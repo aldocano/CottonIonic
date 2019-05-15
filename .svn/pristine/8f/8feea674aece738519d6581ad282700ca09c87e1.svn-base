@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="district in districts">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="district.checked"
+        ng-checked="district.checked" ng-change="changeDistrict({{$index}})">   
+      </label><h2 class="popup_label">{{district.district_Name}}</h2>        
+    </div>
+</div>

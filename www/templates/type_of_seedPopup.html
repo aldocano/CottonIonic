@@ -1,0 +1,8 @@
+<div class="list">
+	<div class="item item-checkbox checkbox-balanced item-checkbox-right popup_list" ng-repeat="tos in tosArray">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="tos.checked"
+        ng-checked="tos.checked" ng-change="changeTos({{$index}})">   
+      </label><h2 class="popup_label">{{tos.name}}</h2>        
+    </div>
+</div>

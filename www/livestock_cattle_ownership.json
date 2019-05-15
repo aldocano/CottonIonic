@@ -1,0 +1,78 @@
+{
+	"livestock_cattle_ownership": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Livestock and Cattle Ownership",
+		"stapleTypeId": 41,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"details": [
+			
+			{
+				"name": "Number of cow/buffallo/bull/ox",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"numberOfCowBuffalloBullOxPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Mid season",
+				"key":"numberOfCowBuffalloBullOxMidSeason",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Number of goat/sheep",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"numberOfGoatSheepPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"numberOfGoatSheepPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Number of poultry",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Pre sowing",
+				"key":"numberOfPoultryPreSowing",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Post harvest",
+				"key":"numberOfPoultryPostHarvest",
+				"type": 1,
+				"has_child": false,
+				"value": " "
+			}
+		]
+	}
+}

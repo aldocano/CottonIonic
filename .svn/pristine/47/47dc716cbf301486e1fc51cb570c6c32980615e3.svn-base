@@ -1,0 +1,19 @@
+<ion-view view-title="Course">
+  <ion-content>
+     <form ng-submit="doSubmit(courseData)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="courseData.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text" ng-model="courseData.description">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">{{Button}}</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

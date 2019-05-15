@@ -1,0 +1,71 @@
+{
+	"water_use": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Water Use",
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Capacity of the water pump installed (In HP)",
+				"type": 2,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Length of suction pipe (meters)",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Diameter of suction Pipe (in inches)",
+				"type": 5,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Length of delivery pipe (meters)",
+				"type": 6,
+				"has_child": false,
+				"value": " "
+			},			
+			{
+				"name": "Cost of electricity",
+				"has_child": true
+			},
+			{
+				"name": "Depth of water at source (In Ft)",
+				"type": 4,
+				"has_child": false,
+				"value": " "
+			}			
+		],
+		"child_details": [
+			{
+				"parent": "Cost of electricity",
+				"name": "Rupees/ Unit",
+				"type": 7,
+				"value": " "
+			},
+			{
+				"parent": "Cost of electricity",
+				"name": "Rupees/ Year",
+				"type": 8,
+				"value": " "
+			}
+			
+		]
+	}
+}

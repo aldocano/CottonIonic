@@ -1,0 +1,100 @@
+{
+	"cotton_picking_harvesting": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Cotton Picking/Harvesting Record For Registered Cotton Farm",
+		"monthOfPickingTypeId": 18,
+		"typeOfStorageTypeId": 26,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"pre_table_data":[
+			{
+				"key":"storageFacility",
+				"label": "Do you have storage facility?",
+				"type":4,
+				"value": 0
+			},
+			{
+				"key":"typeOfStorage",
+				"label": "What is the type of storage?",
+				"type":5,
+				"value": " "
+			}
+		],	
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Month of Picking",
+				"type": 1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Harvested By",
+				"type": 2,
+				"has_child": false,
+				"id":" ",
+				"value": "Tap"
+			},
+			{
+				"key":"hiredLabor",
+				"name": "Hired Labor",
+				"type": 6,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"key":"self",
+				"name": "Self",
+				"type": 6,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Total quantity picked(in KG)",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			},
+			{
+				"name": "Total labor cost",
+				"type": 3,
+				"has_child": false,
+				"value": " "
+			}
+
+		],
+		"child_details": [
+			
+		],
+	    "typeOfStorage": [
+	    	{
+	    		"id":1,
+	    		"name":"House",
+	    		"checked":false
+	    	},
+	    	{
+	    		"id":2,
+	    		"name":"Own Godown",
+	    		"checked":false
+	    	},
+	    	{
+	    		"id":3,
+	    		"name":"Rented Godown",
+	    		"checked":false
+	    	}
+	    ]
+
+		
+	}
+}

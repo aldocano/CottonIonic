@@ -1,0 +1,44 @@
+{
+	"sustainable_practices": {
+		"submitted": false,
+		"farmerId": "",
+		"farmerTimePeriodId": "",
+		"title":"Sustainable practices",
+		"practicesTypeId": 38,
+		"practiceAdoptedTypeId":17,
+		"isSynced": false,
+		"created_by": null,
+		"created_date":null,
+		"updated_date":null,
+		"updated_by":null,
+		"live": true,
+		"activities": [
+			{
+				"name": "Sl. No. "
+			}
+		],
+		"details": [
+			
+			{
+				"name": "Practices",
+				"type": 4.1,
+				"has_child": false,
+				"value": "Tap"
+			},
+			{
+				"name": "Practice adopted",
+				"type": 1,
+				"has_child": false,
+				"value": false
+			},
+			{
+				"name": "Practice adopted in (month)",
+				"type": 4.2,
+				"has_child": false,
+				"value": "Tap"
+			}				
+		],
+		"child_details": [],
+		"select_details":[]
+	}
+}
